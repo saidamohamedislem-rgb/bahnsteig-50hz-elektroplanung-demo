@@ -139,13 +139,13 @@ try {
     }
     if(!$clicked) {
         # Verified CAD wizard screenshot positions RELATIVE TO THE INPUT FIELD.
-        # x Next - x input = 568, y Next - y input = 432 (at reference width 442).
+        # x Next - x input = 568, y Next - y input = 446 (at reference width 442).
         # This avoids relying on the application's outer window dimensions.
         $b=$field.Bounds
         if($b.Width -ge 430 -and $b.Width -le 455 -and
            $b.Height -ge 24 -and $b.Height -le 34) {
             $x=$b.Left+568
-            $y=$b.Top+432
+            $y=$b.Top+446
             $window=Rect $handle
             if($x -gt $window.Left -and $x -lt ($window.Left+$window.Width) -and
                $y -gt $window.Top -and $y -lt ($window.Top+$window.Height)) {
