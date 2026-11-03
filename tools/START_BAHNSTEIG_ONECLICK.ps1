@@ -124,9 +124,9 @@ function Click-Relux([int]$x,[int]$y) {
     [BahnAutoWin32_20261103]::mouse_event(0x0002,0,0,0,[UIntPtr]::Zero)
     [BahnAutoWin32_20261103]::mouse_event(0x0004,0,0,0,[UIntPtr]::Zero)
 }
-function Find-ReluxDialog([int]$pid,[string]$regex) {
+function Find-ReluxDialog([int]$targetProcessId,[string]$regex) {
     return @( [BahnAutoWin32_20261103]::Windows() | Where-Object {
-        $_.PID -eq $pid -and $_.Title -match $regex
+        $_.PID -eq $targetProcessId -and $_.Title -match $regex
     })
 }
 function Invoke-Named([IntPtr]$handle,[string]$regex) {
