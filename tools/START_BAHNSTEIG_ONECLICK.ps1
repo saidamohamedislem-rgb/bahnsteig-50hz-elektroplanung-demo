@@ -152,6 +152,7 @@ function Invoke-Named([IntPtr]$handle,[string]$regex) {
     }
     return $false
 }
+$failed = $false
 try {
     Log "=== Bahnsteig OneClick - safe Relux automation ==="
     if (!(Test-Path "$root\.git")) { throw "Git project not found." }
@@ -247,7 +248,7 @@ try {
     Log "Project metadata verified."
     Save-ReluxScreenshot $handle "02_project_data"
 
-    $advanced=Invoke-Named $dialogHandle "^(?i:OK|Next|Weiter|Continue|Create|Erstellen|Fertigstellen|Finish|Übernehmen)$"
+    $advanced=Invoke-Named $dialogHandle "^(?i:OK|Next|Weiter|Continue|Create|Erstellen|Fertigstellen|Finish|\u00DCbernehmen)$"
     if (!$advanced -and $dialogHandle -ne $handle) {
         # Only on a confirmed, dedicated, owned dialog: IDOK is the native default button.
         $advanced=[BahnAutoWin32_20261103]::PostMessage($dialogHandle,0x0111,[IntPtr]1,[IntPtr]::Zero)
@@ -268,11 +269,11 @@ try {
     }
 
     # Automatic CAD file chooser when Relux opens the native Windows file picker.
-    $openDialogs=Find-ReluxDialog $app.Id "^(?i:Open|Öffnen|Datei öffnen|Select CAD file|CAD-Datei öffnen)$"
+    $openDialogs=Find-ReluxDialog $app.Id "^(?i:Open|\u00D6ffnen|Datei \u00F6ffnen|Select CAD file|CAD-Datei \u00F6ffnen)$"
     if($openDialogs.Count -eq 0) {
-        $browse=Invoke-Named $handle "^(?i:Browse|Durchsuchen|\.\.\.|Select file|Datei auswählen|Datei wählen)$"
+        $browse=Invoke-Named $handle "^(?i:Browse|Durchsuchen|\.\.\.|Select file|Datei ausw\u00E4hlen|Datei w\u00E4hlen)$"
         if($browse) {Start-Sleep -Milliseconds 650}
-        $openDialogs=Find-ReluxDialog $app.Id "^(?i:Open|Öffnen|Datei öffnen|Select CAD file|CAD-Datei öffnen)$"
+        $openDialogs=Find-ReluxDialog $app.Id "^(?i:Open|\u00D6ffnen|Datei \u00F6ffnen|Select CAD file|CAD-Datei \u00F6ffnen)$"
     }
     if($openDialogs.Count -eq 1) {
         $picker=[System.Windows.Automation.AutomationElement]::FromHandle($openDialogs[0].Handle)
@@ -310,6 +311,7 @@ try {
     Log "END: no simulated electrical dimensions or Relux lighting levels have been fabricated."
 }
 catch {
+    $failed = $true
     Log ("STOPPED SAFELY: " + $_.Exception.Message)
 }
 finally {
@@ -320,3 +322,4 @@ finally {
     Log "Report: $log"
     Log "Original V0.2/V0.3 and main Git branch preserved."
 }
+if ($failed) { exit 1 }
