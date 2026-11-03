@@ -134,49 +134,63 @@ try {
       foreach($child in [BahnCadWinApi20261103]::EnumAll($top.H)) {$allWin.Add($child)}
     }
   }
-  $interesting=@($allWin | Where-Object {$_.Title -match '(?i)Import CAD plan|CAD-Import'})
-  $candidates=@($interesting | Where-Object {
-    $_.Width -ge 650 -and $_.Width -le 1100 -and $_.Height -ge 460 -and $_.Height -le 850
-  } | Sort-Object Width)
-  # For an unnamed custom wizard, rely only on the verified bounds of the
-  # user's 798 x 612 dialog, never on an arbitrary application coordinate.
-  if($candidates.Count -eq 0) {
-    $candidates=@($allWin | Where-Object {
-      $_.Width -ge 780 -and $_.Width -le 820 -and
-      $_.Height -ge 595 -and $_.Height -le 630
-    })
+  # Diagnose Win32 windows, but also search inside the Relux UI Automation tree:
+  # custom Relux dialogs do not always own a separate top-level HWND.
+  $allWin | Select-Object ProcessId,Title,Cls,X,Y,Width,Height |
+    Export-Csv -Path (Join-Path $diag 'Windows.csv') -Encoding UTF8 -Delimiter ';' -NoTypeInformation
+  $possible = New-Object System.Collections.Generic.List[object]
+  foreach($app in $apps) {
+    try {
+      $top=$app.MainWindowHandle
+      $nodes=@(Get-Uia $top)
+      $visibleEditors=@($nodes | Where-Object {
+        try {
+          $b=$_.Current.BoundingRectangle
+          $_.Current.ControlType -eq [System.Windows.Automation.ControlType]::Edit -and
+          $_.Current.IsEnabled -and !$_.Current.IsOffscreen -and
+          $b.Width -ge 290 -and $b.Width -le 850 -and
+          $b.Height -ge 18 -and $b.Height -le 55
+        } catch {$false}
+      })
+      $searchControls=@($nodes | Where-Object {
+        try {
+          $_.Current.Name -match '^(?i:Search\.\.\.|Search|Suchen\.\.\.|Durchsuchen)$' -and
+          !$_.Current.IsOffscreen
+        } catch {$false}
+      })
+      foreach($editor in $visibleEditors) {
+        $b=$editor.Current.BoundingRectangle
+        $adjacent=@($searchControls | Where-Object {
+          try {
+            $sr=$_.Current.BoundingRectangle
+            $sr.Left -ge ($b.Right - 15) -and
+            $sr.Left -le ($b.Right + 170) -and
+            [Math]::Abs($sr.Top - $b.Top) -le 45
+          } catch {$false}
+        })
+        if($adjacent.Count -gt 0) {
+          $possible.Add([pscustomobject]@{
+            H=$top; ProcessId=$app.Id; Title='CAD file selection (UIA detected)';
+            Editor=$editor; Rect=$b
+          })
+        }
+      }
+    } catch {
+      Say "UI Automation scan for process $($app.Id) failed: $($_.Exception.Message)"
+    }
   }
-  if($candidates.Count -ne 1) {
-    Say 'Open Relux windows and controls (diagnostic only):'
-    $allWin | Select-Object ProcessId,Title,Cls,X,Y,Width,Height |
-      Export-Csv -Path (Join-Path $diag 'Windows.csv') -Encoding UTF8 -Delimiter ';' -NoTypeInformation
-    throw "Expected one visible CAD wizard; found $($candidates.Count). No input sent."
+  if($possible.Count -ne 1) {
+    Say "CAD file selection fields detected: $($possible.Count)"
+    throw 'Could not uniquely identify the CAD filename field; no mouse or keyboard input sent.'
   }
-  $dialog=$candidates[0]
-  Say "CAD wizard located: $($dialog.Title); size $($dialog.Width)x$($dialog.Height)"
-  if(-not [BahnCadWinApi20261103]::SetForegroundWindow($dialog.H)){
-    throw 'Relux CAD wizard could not be activated.'
-  }
+  $dialog=$possible[0]
+  Say "CAD filename field detected inside Relux PID $($dialog.ProcessId)"
+  [BahnCadWinApi20261103]::SetForegroundWindow($dialog.H) | Out-Null
   Start-Sleep -Milliseconds 400
-  if((ActivePid) -ne $dialog.ProcessId){throw 'Focus is not on the Relux process. No input sent.'}
+  if((ActivePid) -ne $dialog.ProcessId) {throw 'Relux does not have focus.'}
   Snapshot $dialog.H '01-before'
   $controls=Get-Uia $dialog.H
-  $editControls=@($controls | Where-Object {
-    try {
-      $_.Current.ControlType -eq [System.Windows.Automation.ControlType]::Edit -and
-      $_.Current.IsEnabled -and !$_.Current.IsOffscreen
-    } catch {$false}
-  })
-  $fileInput=$null
-  if($editControls.Count -eq 1){$fileInput=$editControls[0]}
-  elseif($editControls.Count -gt 1) {
-    $editControls=@($editControls | Where-Object {
-      $b=$_.Current.BoundingRectangle
-      $b.Width -gt 250 -and $b.Top -gt ($dialog.Y+85) -and
-      $b.Top -lt ($dialog.Y+220)
-    })
-    if($editControls.Count -eq 1) {$fileInput=$editControls[0]}
-  }
+  $fileInput=$dialog.Editor
   $verified=$false
   if($fileInput) {
     $vp=$null
@@ -195,28 +209,43 @@ try {
       $verified=((Get-Clipboard -Raw).Trim() -eq $dxf)
     }
   }
-  if(-not $verified -and $dialog.Width -ge 780 -and $dialog.Width -le 820 -and
-     $dialog.Height -ge 595 -and $dialog.Height -le 630) {
-    # Verified screenshot: text box at x=180..622, y=225..253,
-    # wizard starts x=129,y=87 -> offset (50..493,138..166).
-    Click ($dialog.X+170) ($dialog.Y+152)
-    Set-Clipboard -Value $dxf
-    [System.Windows.Forms.SendKeys]::SendWait('^a')
-    [System.Windows.Forms.SendKeys]::SendWait('^v')
-    Start-Sleep -Milliseconds 150
-    [System.Windows.Forms.SendKeys]::SendWait('^a')
-    [System.Windows.Forms.SendKeys]::SendWait('^c')
-    Start-Sleep -Milliseconds 150
-    $verified=((Get-Clipboard -Raw).Trim() -eq $dxf)
-  }
   if(-not $verified){throw 'DXF filename field could not be verified; stopped without pressing Next.'}
   Say 'DXF filename verified in CAD wizard.'
   Snapshot $dialog.H '02-file-filled'
   Start-Sleep -Milliseconds 400
   $controls=Get-Uia $dialog.H
-  if(-not (Invoke-Next $dialog.H $controls $dialog)) {
-    throw 'Next was not accessible; filename is entered but wizard not advanced.'
+  $nextDone=$false
+  $buttonCandidates=@($controls | Where-Object {
+    try {
+      $_.Current.ControlType -eq [System.Windows.Automation.ControlType]::Button -and
+      $_.Current.Name -match '^(?i:Next|Weiter|Next >|Weiter >)$' -and
+      $_.Current.IsEnabled -and !$_.Current.IsOffscreen
+    } catch {$false}
+  })
+  if($buttonCandidates.Count -eq 1) {
+    $invokePattern=$null
+    if($buttonCandidates[0].TryGetCurrentPattern(
+      [System.Windows.Automation.InvokePattern]::Pattern,[ref]$invokePattern)) {
+      $invokePattern.Invoke()
+      $nextDone=$true
+      Say 'Next clicked through UI Automation.'
+    }
   }
+  if(-not $nextDone) {
+    # Only after verifying the filename in the visible Edit adjacent to Search.
+    # The wizard screenshot establishes these offsets from that exact input field.
+    $b=$dialog.Rect
+    $nextX=[int]($b.Left+568)
+    $nextY=[int]($b.Top+446)
+    $windowRect=Get-Rect $dialog.H
+    if($nextX -gt $windowRect.Left -and $nextX -lt $windowRect.Right -and
+       $nextY -gt $windowRect.Top -and $nextY -lt $windowRect.Bottom) {
+      Click $nextX $nextY
+      $nextDone=$true
+      Say 'Next click sent at verified position relative to CAD filename field.'
+    }
+  }
+  if(-not $nextDone) { throw 'Next control unavailable; no click sent.' }
   Start-Sleep -Milliseconds 1300
   Snapshot $dialog.H '03-after-next'
   $after=Get-Uia $dialog.H
