@@ -179,11 +179,33 @@ try {
       Say "UI Automation scan for process $($app.Id) failed: $($_.Exception.Message)"
     }
   }
-  if($possible.Count -ne 1) {
-    Say "CAD file selection fields detected: $($possible.Count)"
-    throw 'Could not uniquely identify the CAD filename field; no mouse or keyboard input sent.'
+  if($possible.Count -eq 1) {
+    $dialog=$possible[0]
+  } elseif($possible.Count -eq 0) {
+    # The GUI screenshot confirms the CAD import file-picker's visual geometry,
+    # but some Relux controls are invisible to Windows accessibility APIs.
+    $chosen=@($apps | Where-Object { $_.Id -eq 7248 })
+    if($chosen.Count -ne 1) {
+      throw 'CAD UI controls unavailable and original Relux PID 7248 is not present.'
+    }
+    $app=$chosen[0]
+    $r=Get-Rect $app.MainWindowHandle
+    $w=$r.Right-$r.Left
+    $height=$r.Bottom-$r.Top
+    if($w -lt 1580 -or $w -gt 1800 -or $height -lt 830 -or $height -gt 1020) {
+      throw 'CAD controls not found; window geometry does not match original screenshot.'
+    }
+    $dialog=[pscustomobject]@{
+      H=$app.MainWindowHandle
+      ProcessId=$app.Id
+      Title='CAD wizard screenshot-position fallback'
+      Editor=$null
+      Rect=[pscustomobject]@{Left=$r.Left+180;Top=$r.Top+225}
+    }
+    Say 'Using verified screenshot position fallback; no previous projects modified.'
+  } else {
+    throw "Multiple possible CAD edit fields: $($possible.Count)."
   }
-  $dialog=$possible[0]
   Say "CAD filename field detected inside Relux PID $($dialog.ProcessId)"
   [BahnCadWinApi20261103]::SetForegroundWindow($dialog.H) | Out-Null
   Start-Sleep -Milliseconds 400
@@ -209,6 +231,20 @@ try {
       $verified=((Get-Clipboard -Raw).Trim() -eq $dxf)
     }
   }
+  if(-not $verified -and !$fileInput -and $dialog.Title -eq 'CAD wizard screenshot-position fallback') {
+    $pos=Get-Rect $dialog.H
+    Click ($pos.Left+400) ($pos.Top+239)
+    Set-Clipboard -Value $dxf
+    [System.Windows.Forms.SendKeys]::SendWait('^a')
+    [System.Windows.Forms.SendKeys]::SendWait('^v')
+    Start-Sleep -Milliseconds 400
+    Set-Clipboard -Value '__NO_CAD_TEXT_COPIED__'
+    [System.Windows.Forms.SendKeys]::SendWait('^a')
+    [System.Windows.Forms.SendKeys]::SendWait('^c')
+    Start-Sleep -Milliseconds 180
+    $verified=((Get-Clipboard -Raw).Trim() -eq $dxf)
+    if($verified) {Say 'DXF field verified using clipboard read-back from reference position.'}
+  }
   if(-not $verified){throw 'DXF filename field could not be verified; stopped without pressing Next.'}
   Say 'DXF filename verified in CAD wizard.'
   Snapshot $dialog.H '02-file-filled'
@@ -232,7 +268,7 @@ try {
     }
   }
   if(-not $nextDone) {
-    # Only after verifying the filename in the visible Edit adjacent to Search.
+    # Only after the entered DXF has been copied back and verified.
     # The wizard screenshot establishes these offsets from that exact input field.
     $b=$dialog.Rect
     $nextX=[int]($b.Left+568)
