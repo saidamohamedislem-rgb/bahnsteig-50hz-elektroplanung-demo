@@ -1,15 +1,20 @@
 ﻿# Entwicklungsprotokoll
 
-## 2026-11-03 - Version 0.1
+## 2026-11-03 - Version 0.2
 
-- Repository vorbereitet
-- Projektstruktur erstellt
-- Projektauftrag dokumentiert
+- Bahnsteig-Lageplan als DXF erstellt
+- SVG- und PNG-Vorschau erzeugt
+- Entwurf visuell geprueft
+- Layout V0.2 in GitHub dokumentiert
+
+## Erledigt
+- [x] Repository vorbereitet
+- [x] Projektstruktur erstellt
+- [x] Projektauftrag dokumentiert
+- [x] Bahnsteig-Grundriss in BricsCAD / DXF
 
 ## Offene Aufgaben
-
-- [ ] Bahnsteig-Grundriss in BricsCAD
-- [ ] Kabeltrassen und Verteiler
+- [ ] Kabeltrassen verfeinern
 - [ ] Stromlaufplan
 - [ ] SIMARIS-Berechnung
 - [ ] Relux-Lichtsimulation
