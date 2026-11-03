@@ -21,14 +21,25 @@ public static class BahnLdtUI26{
  [DllImport("user32.dll")]public static extern bool SetCursorPos(int x,int y);
  [DllImport("user32.dll")]public static extern void mouse_event(uint f,uint x,uint y,uint data,UIntPtr extra);
  [StructLayout(LayoutKind.Sequential)]public struct RECT{public int Left,Top,Right,Bottom;}
+ [DllImport("user32.dll")]public static extern bool EnumChildWindows(IntPtr parent,Callback fn,IntPtr data);
+ public static W Describe(IntPtr hwnd){
+  uint pid;GetWindowThreadProcessId(hwnd,out pid);
+  var b=new StringBuilder(300);var c=new StringBuilder(100);
+  GetWindowText(hwnd,b,b.Capacity);GetClassName(hwnd,c,c.Capacity);
+  return new W{H=hwnd,PID=(int)pid,Name=b.ToString(),Class=c.ToString()};
+ }
  public static W[] List(){
   var list=new List<W>();
   EnumWindows((hwnd,data)=>{
-   if(!IsWindowVisible(hwnd))return true;
-   uint pid;GetWindowThreadProcessId(hwnd,out pid);
-   var b=new StringBuilder(300);var c=new StringBuilder(100);
-   GetWindowText(hwnd,b,b.Capacity);GetClassName(hwnd,c,c.Capacity);
-   list.Add(new W{H=hwnd,PID=(int)pid,Name=b.ToString(),Class=c.ToString()});
+   if(IsWindowVisible(hwnd))list.Add(Describe(hwnd));
+   return true;
+  },IntPtr.Zero);
+  return list.ToArray();
+ }
+ public static W[] Children(IntPtr parent){
+  var list=new List<W>();
+  EnumChildWindows(parent,(hwnd,data)=>{
+   if(IsWindowVisible(hwnd))list.Add(Describe(hwnd));
    return true;
   },IntPtr.Zero);
   return list.ToArray();
@@ -54,16 +65,225 @@ function Click([int]$x,[int]$y){
  [BahnLdtUI26]::mouse_event(2,0,0,0,[UIntPtr]::Zero)
  [BahnLdtUI26]::mouse_event(4,0,0,0,[UIntPtr]::Zero)
 }
-function Selector([int]$processId){
- $items=@([BahnLdtUI26]::List()|Where-Object {
-  $_.PID -eq $processId -and $_.Name -match '^(?i:Product selection|Produktauswahl)$'
+function Selector([int]$mainProcessId){
+ # Product selection can belong to RlxProductSelector.exe, not reluxPro.exe.
+ $windows=@([BahnLdtUI26]::List())
+ $selection=@($windows | Where-Object {
+  $_.Name -match '^(?i:Product selection|Produktauswahl)
+function At($dialog,[double]$x,[double]$y){
+ Click ([int]($dialog.B.X+$dialog.B.W*$x)) ([int]($dialog.B.Y+$dialog.B.H*$y))
+}
+function Screenshot($dialog,[string]$tag){
+ $b=$dialog.B
+ $bmp=New-Object System.Drawing.Bitmap($b.W,$b.H)
+ $g=[System.Drawing.Graphics]::FromImage($bmp)
+ try{$g.CopyFromScreen($b.X,$b.Y,0,0,$bmp.Size);
+   $bmp.Save((Join-Path $report ($tag+'.png')),[System.Drawing.Imaging.ImageFormat]::Png)}
+ finally{$g.Dispose();$bmp.Dispose()}
+}
+function ImportLdt($dlg,[string]$file){
+ Say ('Selecting '+[IO.Path]::GetFileName($file))
+ [BahnLdtUI26]::SetForegroundWindow($dlg.H)|Out-Null
+ Start-Sleep -Milliseconds 180
+ At $dlg 0.104 0.332
+ Start-Sleep -Milliseconds 530
+ $fg=[BahnLdtUI26]::GetForegroundWindow()
+ $candidate=@([BahnLdtUI26]::List()|Where-Object{$_.H -eq $fg})
+ if($candidate.Count -ne 1 -or $candidate[0].PID -ne $dlg.PID -or
+   ($candidate[0].Class -ne '#32770' -and $candidate[0].Name -notmatch '(?i)open|ffnen')){
+  throw 'File picker not confirmed; no text typed.'
+ }
+ [System.Windows.Forms.SendKeys]::SendWait('%n')
+ Start-Sleep -Milliseconds 130
+ Set-Clipboard -Value $file
+ [System.Windows.Forms.SendKeys]::SendWait('^a')
+ [System.Windows.Forms.SendKeys]::SendWait('^v')
+ Start-Sleep -Milliseconds 150
+ Set-Clipboard -Value '__NO_LDT__'
+ [System.Windows.Forms.SendKeys]::SendWait('^a')
+ [System.Windows.Forms.SendKeys]::SendWait('^c')
+ Start-Sleep -Milliseconds 150
+ if((Get-Clipboard -Raw).Trim() -ne $file){throw 'Picker filename read-back failed. No Enter sent.'}
+ [System.Windows.Forms.SendKeys]::SendWait('{ENTER}')
+ Start-Sleep -Milliseconds 630
+ $dlg=Selector $dlg.MainPID
+ At $dlg 0.335 0.278
+ Start-Sleep -Milliseconds 120
+ Set-Clipboard -Value '__NO_LDT__'
+ [System.Windows.Forms.SendKeys]::SendWait('^a')
+ [System.Windows.Forms.SendKeys]::SendWait('^c')
+ Start-Sleep -Milliseconds 150
+ $read=(Get-Clipboard -Raw).Trim()
+ if($read -notlike ('*'+[IO.Path]::GetFileName($file)+'*')){
+  Screenshot $dlg 'FileSelected_Unverified'
+  throw ('Relux product filename read-back was '+$read+'; no Add click.')
+ }
+ Say 'LDT path confirmed in Relux product selector.'
+ Screenshot $dlg ('Selected_'+[IO.Path]::GetFileNameWithoutExtension($file))
+ At $dlg 0.125 0.708
+ Start-Sleep -Milliseconds 450
+ Say 'Add >> requested; verify product acceptance in Relux.'
+}
+try{
+ $apps=@(Get-Process reluxPro -ErrorAction SilentlyContinue|Where-Object{
+  $_.MainWindowHandle -ne [IntPtr]::Zero -and $_.MainWindowTitle -match '^Bahnsteig_Beleuchtung_V0\.6 - ReluxDesktop'
  })
- if($items.Count -ne 1){throw ('Relux Product selection count = '+$items.Count)}
+ if($apps.Count -ne 1){throw 'Cannot identify exactly one V0.6 process.'}
+ $ready=@(Get-ChildItem $downloads -Directory -Filter 'Bahnsteig_Relux_Ready_*' |
+  Sort-Object LastWriteTime -Descending)
+ $ldt=$null
+ foreach($d in $ready){
+  $try=Join-Path $d.FullName '01_LDT_Photometry'
+  if(Test-Path $try){$ldt=$try;break}
+ }
+ if(!$ldt){throw 'No prepared LDT directory.'}
+ $files=@(
+  (Join-Path $ldt 'DB_Schmidt_Strahl_18p5W_BB_4000K.LDT'),
+  (Join-Path $ldt 'DB_Schmidt_Strahl_14W_4000K.LDT')
+ )
+ foreach($f in $files){if(!(Test-Path -LiteralPath $f)){throw ('LDT not found: '+$f)}}
+ $selector=Selector $apps[0].Id
+ Say ('Product selection found in PID '+$selector.PID+' (Relux main PID '+$selector.MainPID+').')
+ # Individual luminaire tab verified by screenshot location, click only in the matching dialog.
+ [BahnLdtUI26]::SetForegroundWindow($selector.H)|Out-Null
+ At $selector 0.398 0.081
+ Start-Sleep -Milliseconds 260
+ Screenshot $selector '01_Before'
+ foreach($f in $files){$selector=Selector $apps[0].Id;ImportLdt $selector $f}
+ $selector=Selector $apps[0].Id
+ Screenshot $selector '03_After'
+ Say 'Two Add requests sent; physical luminaire placement NOT performed.'
+ $ok=$true
+}catch{Say ('SAFE STOP: '+$_.Exception.Message)}
+finally{
+ $log|Set-Content -LiteralPath (Join-Path $report 'Status.txt') -Encoding UTF8
+ if($null -ne $originalClipboard){try{Set-Clipboard -Value $originalClipboard}catch{}}
+ Write-Host ('Report: '+$report)
+ Write-Host 'V0.5, V0.6 and GitHub main not modified by this script.'
+}
+if(!$ok){exit 1}
+
+ })
+ if($selection.Count -eq 0){
+  # MDI dialogs in the main Relux window can be children, not top-level.
+  foreach($w in $windows){
+   $processName=''
+   try{$processName=(Get-Process -Id $w.PID -ErrorAction Stop).ProcessName}catch{}
+   if($w.PID -eq $mainProcessId -or $processName -match '(?i)relux|rlxproduct'){
+    $selection+=@([BahnLdtUI26]::Children($w.H)|Where-Object {
+     $_.Name -match '^(?i:Product selection|Produktauswahl)
+function At($dialog,[double]$x,[double]$y){
+ Click ([int]($dialog.B.X+$dialog.B.W*$x)) ([int]($dialog.B.Y+$dialog.B.H*$y))
+}
+function Screenshot($dialog,[string]$tag){
+ $b=$dialog.B
+ $bmp=New-Object System.Drawing.Bitmap($b.W,$b.H)
+ $g=[System.Drawing.Graphics]::FromImage($bmp)
+ try{$g.CopyFromScreen($b.X,$b.Y,0,0,$bmp.Size);
+   $bmp.Save((Join-Path $report ($tag+'.png')),[System.Drawing.Imaging.ImageFormat]::Png)}
+ finally{$g.Dispose();$bmp.Dispose()}
+}
+function ImportLdt($dlg,[string]$file){
+ Say ('Selecting '+[IO.Path]::GetFileName($file))
+ [BahnLdtUI26]::SetForegroundWindow($dlg.H)|Out-Null
+ Start-Sleep -Milliseconds 180
+ At $dlg 0.104 0.332
+ Start-Sleep -Milliseconds 530
+ $fg=[BahnLdtUI26]::GetForegroundWindow()
+ $candidate=@([BahnLdtUI26]::List()|Where-Object{$_.H -eq $fg})
+ if($candidate.Count -ne 1 -or $candidate[0].PID -ne $dlg.PID -or
+   ($candidate[0].Class -ne '#32770' -and $candidate[0].Name -notmatch '(?i)open|ffnen')){
+  throw 'File picker not confirmed; no text typed.'
+ }
+ [System.Windows.Forms.SendKeys]::SendWait('%n')
+ Start-Sleep -Milliseconds 130
+ Set-Clipboard -Value $file
+ [System.Windows.Forms.SendKeys]::SendWait('^a')
+ [System.Windows.Forms.SendKeys]::SendWait('^v')
+ Start-Sleep -Milliseconds 150
+ Set-Clipboard -Value '__NO_LDT__'
+ [System.Windows.Forms.SendKeys]::SendWait('^a')
+ [System.Windows.Forms.SendKeys]::SendWait('^c')
+ Start-Sleep -Milliseconds 150
+ if((Get-Clipboard -Raw).Trim() -ne $file){throw 'Picker filename read-back failed. No Enter sent.'}
+ [System.Windows.Forms.SendKeys]::SendWait('{ENTER}')
+ Start-Sleep -Milliseconds 630
+ $dlg=Selector $dlg.PID
+ At $dlg 0.335 0.278
+ Start-Sleep -Milliseconds 120
+ Set-Clipboard -Value '__NO_LDT__'
+ [System.Windows.Forms.SendKeys]::SendWait('^a')
+ [System.Windows.Forms.SendKeys]::SendWait('^c')
+ Start-Sleep -Milliseconds 150
+ $read=(Get-Clipboard -Raw).Trim()
+ if($read -notlike ('*'+[IO.Path]::GetFileName($file)+'*')){
+  Screenshot $dlg 'FileSelected_Unverified'
+  throw ('Relux product filename read-back was '+$read+'; no Add click.')
+ }
+ Say 'LDT path confirmed in Relux product selector.'
+ Screenshot $dlg ('Selected_'+[IO.Path]::GetFileNameWithoutExtension($file))
+ At $dlg 0.125 0.708
+ Start-Sleep -Milliseconds 450
+ Say 'Add >> requested; verify product acceptance in Relux.'
+}
+try{
+ $apps=@(Get-Process reluxPro -ErrorAction SilentlyContinue|Where-Object{
+  $_.MainWindowHandle -ne [IntPtr]::Zero -and $_.MainWindowTitle -match '^Bahnsteig_Beleuchtung_V0\.6 - ReluxDesktop'
+ })
+ if($apps.Count -ne 1){throw 'Cannot identify exactly one V0.6 process.'}
+ $ready=@(Get-ChildItem $downloads -Directory -Filter 'Bahnsteig_Relux_Ready_*' |
+  Sort-Object LastWriteTime -Descending)
+ $ldt=$null
+ foreach($d in $ready){
+  $try=Join-Path $d.FullName '01_LDT_Photometry'
+  if(Test-Path $try){$ldt=$try;break}
+ }
+ if(!$ldt){throw 'No prepared LDT directory.'}
+ $files=@(
+  (Join-Path $ldt 'DB_Schmidt_Strahl_18p5W_BB_4000K.LDT'),
+  (Join-Path $ldt 'DB_Schmidt_Strahl_14W_4000K.LDT')
+ )
+ foreach($f in $files){if(!(Test-Path -LiteralPath $f)){throw ('LDT not found: '+$f)}}
+ $selector=Selector $apps[0].Id
+ Say 'Existing V0.6 product selector found.'
+ Screenshot $selector '01_Before'
+ foreach($f in $files){$selector=Selector $apps[0].Id;ImportLdt $selector $f}
+ $selector=Selector $apps[0].Id
+ Screenshot $selector '03_After'
+ Say 'Two Add requests sent; physical luminaire placement NOT performed.'
+ $ok=$true
+}catch{Say ('SAFE STOP: '+$_.Exception.Message)}
+finally{
+ $log|Set-Content -LiteralPath (Join-Path $report 'Status.txt') -Encoding UTF8
+ if($null -ne $originalClipboard){try{Set-Clipboard -Value $originalClipboard}catch{}}
+ Write-Host ('Report: '+$report)
+ Write-Host 'V0.5, V0.6 and GitHub main not modified by this script.'
+}
+if(!$ok){exit 1}
+
+    })
+   }
+  }
+ }
+ $items=@($selection|Where-Object {
+  $proc=''
+  try{$proc=(Get-Process -Id $_.PID -ErrorAction Stop).ProcessName}catch{}
+  $_.PID -eq $mainProcessId -or $proc -match '(?i)relux|rlxproduct'
+ }|Sort-Object PID,Name -Unique)
+ if($items.Count -ne 1){
+  Say "Product selector candidates: $($items.Count)"
+  foreach($w in $windows|Where-Object {
+    $_.Name -match '(?i)Product|Relux|Rlx'
+   }|Select-Object -First 12){
+   Say "Window candidate: PID=$($w.PID), title=$($w.Name), class=$($w.Class)"
+  }
+  throw 'Product selector not detected; it may be closed. No input sent.'
+ }
  $box=Bounds $items[0].H
  if($box.W -lt 850 -or $box.W -gt 1250 -or $box.H -lt 550 -or $box.H -gt 850){
   throw ('Unexpected product dialog dimensions '+$box.W+'x'+$box.H)
  }
- [pscustomobject]@{H=$items[0].H;B=$box;PID=$processId}
+ [pscustomobject]@{H=$items[0].H;B=$box;PID=$items[0].PID;MainPID=$mainProcessId}
 }
 function At($dialog,[double]$x,[double]$y){
  Click ([int]($dialog.B.X+$dialog.B.W*$x)) ([int]($dialog.B.Y+$dialog.B.H*$y))
