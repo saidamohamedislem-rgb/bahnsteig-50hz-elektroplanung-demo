@@ -1,0 +1,28 @@
+﻿SIMARIS DESIGN - PLANUNGSGRUNDLAGEN
+
+Projekt: Fiktive Bahnsteigmodernisierung 50 Hz
+
+Annahme: Einspeisung 400/230 V, 50 Hz
+Verteiler: UV-01
+
+Geplante Stromkreise:
+A - Bahnsteigbeleuchtung, 6 Leuchten
+B - Bahnsteigbeleuchtung, 6 Leuchten
+C - Informationsanzeige, Daten offen
+D - Lautsprecheranlage, Daten offen
+
+VOR DER DIMENSIONIERUNG ZU KLAEREN:
+- Netzform und Netzbetreiberdaten
+- Kurzschlussleistung / Netzimpedanz
+- Reale Leuchtenleistung und Leistungsfaktor
+- Leistung weiterer Verbraucher
+- Kabelwege und Laengen
+- Verlegeart und Umgebungsbedingungen
+- Schutzorgan und Abschaltbedingungen
+- Spannungsfall
+- Selektivitaet
+- Erdung und Ueberspannungsschutz
+
+Keine Kabel- oder Schutzgeraete freigegeben.
+CSV dient als Eingabevorlage, nicht als
+direkt importierbares SIMARIS-Projekt.
