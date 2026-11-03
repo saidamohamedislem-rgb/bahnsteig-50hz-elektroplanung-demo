@@ -53,6 +53,7 @@ $dxf=Join-Path $project '05_Relux_Beleuchtung\Bahnsteig_Relux_Import_V0.4.dxf'
 $diag=Join-Path $env:USERPROFILE ('Downloads\Bahnsteig-CAD-Import-'+(Get-Date -Format 'yyyyMMdd-HHmmss'))
 New-Item -ItemType Directory -Path $diag -Force | Out-Null
 $messages=New-Object System.Collections.Generic.List[string]
+$scriptFailed=$false
 function Say([string]$s) { Write-Host $s; $messages.Add($s) }
 function Get-Rect([IntPtr]$h) {
   $r=New-Object BahnCadWinApi20261103+RECT
@@ -71,8 +72,9 @@ function Snapshot([IntPtr]$h,[string]$name) {
 }
 function Get-Uia([IntPtr]$h) {
   $ui=[System.Windows.Automation.AutomationElement]::FromHandle($h)
-  return ,@($ui.FindAll([System.Windows.Automation.TreeScope]::Descendants,
-    [System.Windows.Automation.Condition]::TrueCondition))
+  $items=$ui.FindAll([System.Windows.Automation.TreeScope]::Descendants,
+    [System.Windows.Automation.Condition]::TrueCondition)
+  foreach($item in $items) { Write-Output $item }
 }
 function Click([int]$x,[int]$y) {
   [BahnCadWinApi20261103]::SetCursorPos($x,$y) | Out-Null
@@ -231,6 +233,7 @@ try {
   }
   Say 'Actual Relux .rdf and lighting calculation still need validation.'
 } catch {
+  $scriptFailed=$true
   Say ('STOPPED: '+$_.Exception.Message)
 } finally {
   $messages | Set-Content -Path (Join-Path $diag 'Status.txt') -Encoding UTF8
@@ -238,3 +241,5 @@ try {
   Write-Host "Diagnostic folder: $diag"
   Write-Host 'Original CAD and GitHub main branch unchanged.'
 }
+
+if($scriptFailed) {exit 1}
