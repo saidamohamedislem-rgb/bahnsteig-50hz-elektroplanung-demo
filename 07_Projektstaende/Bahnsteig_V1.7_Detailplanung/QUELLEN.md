@@ -27,7 +27,7 @@ Keine kostenpflichtigen Dienste oder neuen Lizenzen erworben. Vorhandene install
 - Nexans tatsächlich getestete Webmaske: https://www.nexans.ch/de/Tools-and-downloads/easycalc/easycalc.html
 - Siemens SIMARIS-Funktionen / Registrierung: https://www.siemens.com/de-de/products/simaris/
 
-Kosten: keine Buchung vorgenommen. ELEK-Professional-Test laut Anbieter 14 Tage; native Netzrechnung noch nicht ausgeführt. Herstellerbeschreibungen sind keine unabhängige Validierung des Rechenkerns. Auswahlrecherche mit ai-research-analyst und verified-improvement; native Zustandsprüfung mit computer-use. Browserprüfung: Nexans erreichbar, Stromeingabe unter 1 A abgelehnt; ELEK-Registrierungsnavigation im lokalen Browser Timeout. Schema-/Lastdaten wurden lokal aus dem vorhandenen Modell aufgebaut und die Abschnittssummen mit der V1.3-Rechnung abgeglichen.
+Kosten: keine Buchung vorgenommen. ELEK-Professional-Test laut Anbieter 14 Tage; native Netzrechnung noch nicht ausgeführt. Herstellerbeschreibungen sind keine unabhängige Validierung des Rechenkerns. Browserprüfung: Nexans erreichbar, Stromeingabe unter 1 A abgelehnt; ELEK-Registrierungsnavigation im lokalen Browser Timeout. Schema-/Lastdaten wurden lokal aus dem vorhandenen Modell aufgebaut und die Abschnittssummen mit der V1.3-Rechnung abgeglichen.
 
 
 ## V1.5 Web-Netzrechnung, Stand 04.11.2026
