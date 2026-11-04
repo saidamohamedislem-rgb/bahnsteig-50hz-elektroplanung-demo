@@ -1,0 +1,17 @@
+﻿Pruefpunkt;Status;Beleg_oder_Luecke
+Leuchtenanzahl und Positionen;Verified;12 native PDF-Zeilen, mit V1.2 verglichen
+Nominale Leistung und A/B;Verified;"204 W; A/B je 6 und 102 W"
+Native Lichtberechnung;Verified;"18.1 / 7.96 / 37 lx; U0 0.44"
+Isolux / False Colours / Tabellen;Verified;18 native PDF-Seiten zusammengeführt
+Plattform und Dachkoordination;Verified;"CAD-Export 120x4; Dach X45..75; Stützen global korrekt"
+Native DWG / PDF;Verified;"DWG AC1032/AC1018; in BricsCAD geöffnet; PDF gerendert"
+Reale Bestandsmaße und Materialien;Preliminary;Fiktives Demo-Modell, keine Vermessung
+Stromlaufplan und Kabeltrassen;Preliminary;Funktionen / Trassen schematisch, keine Gerätefreigabe
+Spannungsfall;Preliminary;Nur ohmscher Szenarioanteil in XLSX
+Lichtklasse / Grenzwerte / Blendung;Missing;Sollwerte und vollständige Fachbewertung fehlen
+Kurzschluss und Abschaltung;Missing;Netzimpedanz / Ik min/max fehlen
+Kabelbemessung und Schutzgeräte;Missing;Verlegung, Iz, In, Icn, Treiberdaten offen
+Selektivität;Missing;Konkrete Geräte und Herstellerkoordination fehlen
+SPD / PE / PA / Bahn-Erdung;Missing;Konzeptpositionen, Schnittstellenfreigabe fehlt
+Sicherheitsbeleuchtung / weitere Verbraucher;Missing;Anforderungen und vollständige Lasten fehlen
+Vollständige technische Planung;Missing;Wesentliche elektrische Nachweise offen

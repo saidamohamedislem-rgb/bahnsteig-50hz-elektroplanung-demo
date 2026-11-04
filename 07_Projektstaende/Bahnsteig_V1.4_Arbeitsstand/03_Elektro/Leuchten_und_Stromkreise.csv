@@ -1,0 +1,13 @@
+﻿ID;Circuit;Group;X_m;Y_m;Z_m;Power_W;LDT
+L01;A;Open_Left;5;2.0;4.5;18.5;DB_Schmidt_Strahl_18p5W_BB_4000K.LDT
+L02;B;Open_Left;15;2.0;4.5;18.5;DB_Schmidt_Strahl_18p5W_BB_4000K.LDT
+L03;A;Open_Left;25;2.0;4.5;18.5;DB_Schmidt_Strahl_18p5W_BB_4000K.LDT
+L04;B;Open_Left;35;2.0;4.5;18.5;DB_Schmidt_Strahl_18p5W_BB_4000K.LDT
+L05;A;Canopy;45;2.0;4.3;14.0;DB_Schmidt_Strahl_14W_4000K.LDT
+L06;B;Canopy;55;2.0;4.3;14.0;DB_Schmidt_Strahl_14W_4000K.LDT
+L07;A;Canopy;65;2.0;4.3;14.0;DB_Schmidt_Strahl_14W_4000K.LDT
+L08;B;Canopy;75;2.0;4.3;14.0;DB_Schmidt_Strahl_14W_4000K.LDT
+L09;A;Open_Right;85;2.0;4.5;18.5;DB_Schmidt_Strahl_18p5W_BB_4000K.LDT
+L10;B;Open_Right;95;2.0;4.5;18.5;DB_Schmidt_Strahl_18p5W_BB_4000K.LDT
+L11;A;Open_Right;105;2.0;4.5;18.5;DB_Schmidt_Strahl_18p5W_BB_4000K.LDT
+L12;B;Open_Right;115;2.0;4.5;18.5;DB_Schmidt_Strahl_18p5W_BB_4000K.LDT

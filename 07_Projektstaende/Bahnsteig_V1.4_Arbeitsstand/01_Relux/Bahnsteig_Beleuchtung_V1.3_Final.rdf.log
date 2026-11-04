@@ -1,0 +1,87 @@
+
+
+___________________________ START CALCULATION ________________________________
+[Scenename:] Exterior 2
+[Scenefile:] C:\Users\mouha\AppData\Local\Temp\ReluxDesktop_TempProject\RlxProject_6.rdf
+______________________________________________________________________________
+RlxCalculator Version: 2026.2.7.5 64-bit
+______________________________________________________________________________
+[Calculation options:] 
+______________________________________________________________________________
+[FastCalc On:] 0
+[Calculation type:] 
+Artificial Lighting
+
+______________________________________________________________________________
+______________________________________________________________________________
+[CPU and Multicore Information:] 
+______________________________________________________________________________
+[Vendor: ] GenuineIntel
+[Brand: ] Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz
+[OS Architecture: ] AMD64 x64
+[Number of logical processors: ] 8
+[Max. number of threads: ] 8
+[OpenMP wait policy: ] PASSIVE
+[OpenMP processor binding: ] FALSE
+______________________________________________________________________________
+[MaxCells inside VisGrid: ] 40
+[Scene dimensions in [m]:] 120: 5: 5
+______________________________________________________________________________
+[Luminaire and Measuring Point parameters:] 
+______________________________________________________________________________
+[Number of Luminaires:] 12
+[Total flux of Luminaires:] 30723.2
+[Quadratic Interpolation:] 1
+[Number of Measuring Points: ] 0
+[Number of UGR Observers: ] 0
+[Number of GR Observers: ] 0
+[Number of DGP Observers: ] 0
+______________________________________________________________________________
+[Mesh Cluster information:] 
+______________________________________________________________________________
+[Number of Prototypes:] 48
+[Number of Clones: ] 0
+[Number of ordinary Clusters: ] 0
+______________________________________________________________________________
+[Progressive Radiosity Parameters:] 
+______________________________________________________________________________
+[Decimal Places for scene parsing:] 3
+[Cluster Cloning:] 1
+[AttenuationFactor:] 1.25
+[FluxFactor:] 1
+[Indirect Portion:] 1
+[Substructuring:] 1
+[Maximal Shots:] 1
+[Patch Subdivision:] 0.95
+[Element Subdivision:] 2
+[Termination Threshold:] 0.5
+[Formfactor Threshold:] 0.1
+[Formfactor Correction:] 1
+[Area Threshold:] 0.006
+[OuterSurface On/Off:] 1
+[Number of original Polygons:] 55
+[Number of Patches:] 2962
+______________________________________________________________________________
+[ Artificial Lighting: ]
+______________________________________________________________________________
+[Classical Maintenancefactor: ]
+[Iterations: ] 938
+[Number of Elements direct Illum.: ] 2986
+[Number of Elements indirect Illum.: ] 2938
+[Number of Clusters: ] 48
+[Original Indirect Power: ] 1909.4
+[Remaining Indirect Power: ] 954.541
+[Luminous Flux Luminaires: ] 22900.4
+[Luminous Flux Direct Elements: ] 0
+[Flux Correction Factor Direct: ] 0
+[Flux Correction Factor Indirect: ] 0
+[Luminous Flux Indirect Elements: ] 0
+[Luminous Flux Patches: ] 0
+[Remaining Luminance: ] 0
+[Average Reflectance: ] 0.362365
+______________________________________________________________________________
+[Total calculation time in(sec.): ] 2
+[Min Luminance total: ] 3.1831e-05
+[Max Luminance total: ] 8.93472
+[Mean Luminance total: ] 0.926201
+[Calculation status:] finished

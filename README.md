@@ -31,6 +31,10 @@ oder der Deutschen Bahn.
 
 ## Status
 
+## Fortsetzung V1.4 - Web-Netzschaltplan vorbereiten
+
+Neue [V1.4-Eingabebasis](07_Projektstaende/Bahnsteig_V1.4_Arbeitsstand/08_Webberechnung/WEB_ALTERNATIVE.md): 12 Lasten und 24 schematische Leitungsabschnitte für einen Web-Netzschaltplan. ELEK Cable Pro Web Professional-Test als nächste Option ausgewählt; Registrierung übernimmt der Benutzer. Noch kein neuer Netz-Rechenlauf. Die nachfolgenden V1.3-Lichtwerte bleiben unverändert.
+
 ## Aktueller Arbeitsstand – V1.3, 04.11.2026
 
 Die aktuelle gesicherte Version liegt unter [07_Projektstaende/Bahnsteig_V1.3_Final](07_Projektstaende/Bahnsteig_V1.3_Final/README.md).
