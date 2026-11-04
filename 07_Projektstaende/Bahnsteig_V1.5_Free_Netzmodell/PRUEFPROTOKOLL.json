@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-04",
+  "version": "V1.5 Free-Netzmodell",
+  "engineering_complete": false,
+  "native_network_calculation_id": 23427,
+  "native_request_success": true,
+  "native_errors": [],
+  "luminaire_count": 12,
+  "nominal_W": 204,
+  "model_equivalent_W_at_230V": 205.39,
+  "unchanged_light_model": true,
+  "new_lighting_calculation": false,
+  "native_reports_pages": {
+    "01_Relux/Relux_V13_Final_FalseColours.pdf": 1,
+    "01_Relux/Relux_V13_Final_Gesamtbericht.pdf": 18,
+    "01_Relux/Relux_V13_Final_Tabellen_Isolux.pdf": 17,
+    "02_CAD/Bahnsteig_V13_Lageplan.pdf": 1,
+    "02_CAD/Bahnsteig_V13_Stromlaufplan.pdf": 1,
+    "02_CAD/Bahnsteig_V15_Stromlaufplan.pdf": 1,
+    "05_Grundlagen/Bahnsteig_V1.2_Relux_Report.pdf": 15,
+    "08_Webberechnung/ELEK_V15_Nativer_Kennlinienvergleich.pdf": 3,
+    "08_Webberechnung/ELEK_V15_Nativer_Netzbericht.pdf": 7
+  },
+  "independent_references": [
+    {
+      "length_m": 109.7,
+      "reference_DU_R_V": 1.4694314999999998,
+      "native_DU_V": 1.472,
+      "reference_Ief_A": 98.03275135318809,
+      "native_Ief_A": 98.03
+    },
+    {
+      "length_m": 119.7,
+      "reference_DU_R_V": 1.6033814999999996,
+      "native_DU_V": 1.606,
+      "reference_Ief_A": 90.11561951686346,
+      "native_Ief_A": 90.12
+    }
+  ],
+  "checks_passed": [
+    "Relux and V1.2/original foundations byte-identical to V1.4",
+    "12 expected unchanged luminaire coordinates and 204 W / A-B 102 W totals",
+    "Native free model 23427: one board, two 0.47-A loads on L1/L2, Connected Load",
+    "Independent R-voltage reference within 1%; U0/abs(Zs) within 0.01 A of native",
+    "All PDFs parsed; native ELEK 7+3 pages with B20/B6 and watermark; native DWG AC1032",
+    "XLSX exported formulas and no stored error cells; artifact-tool recalculation and length-change dependency passed"
+  ],
+  "XLSX_formula_cells": 22,
+  "essential_missing": [
+    "Reale Netzform / Ik min-max",
+    "Konkrete Schutzgeraete / Icn / Einschaltstrom",
+    "Gesamtselektivitaet",
+    "RCD / SPD / PE-PA / Bahn-Erdung",
+    "Licht-Sollwerte / Blendung / Sicherheitsbeleuchtung",
+    "Anzeige / Beschallung / Zusatzlasten",
+    "Technische Gesamtplanung"
+  ],
+  "cost_new_service_EUR": 0,
+  "paid_plan_activated": false,
+  "verification_limits": [
+    "Model results verified, not actual source/installation",
+    "No native Microsoft Excel application recalculation claimed",
+    "No manufacturer total selectivity / Icn approval",
+    "Two B20 instances in series retained and disclosed"
+  ]
+}

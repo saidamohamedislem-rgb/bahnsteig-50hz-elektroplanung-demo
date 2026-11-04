@@ -1,0 +1,18 @@
+﻿Pruefpunkt;Status;Beleg_oder_Luecke
+12 Leuchten / 204 W / Positionen;Verified;"Relux V1.3 und Lastliste unveraendert; Hashvergleich zu V1.4"
+Lichtsimulation / Isolux / False Colours;Verified;18-seitiger nativer Relux-Bericht unveraendert
+Geometriekoordination;Verified;"Modell 120x4 m; Dach X45..75; keine neue Geometrie in V1.5"
+Reale Geometrie / Materialien;Preliminary;Demo-Modell ohne Bestandsaufnahme
+ELEK-Free-Rechenlauf;Verified;"23427; 1 UV + 2 Lasten; erfolgreiche native Antwort ohne Fehler"
+ELEK Netzbericht / Kennlinienbericht;Verified;7 + 3 native PDF-Seiten mit Free-Wasserzeichen
+Native CAD-Ausgabe / Referenz-XLSX;Verified;"V15 DWG in BricsCAD gespeichert, PDF; XLSX-Formeln ausgewertet"
+Spannungsfall-Szenario;Verified;"Native 0.652/0.710 Prozent; Referenz R-Abweichung <1 Prozent"
+Reale Netzform / Ik min-max;Missing;TN/3kA nur Demoannahmen, keine Netzbetreiberdaten
+Kabelbemessung im Szenario;Preliminary;"L/N 1.5 und PE separat4, D1; reale Installation / Artikel fehlen"
+Abschaltung im Szenario;Preliminary;"Ief > generisch Ia30A; kein realer Abschlussnachweis"
+Konkrete Schutzgeraete / Icn / Einschaltstrom;Missing;"Generic MCB; Herstellerwerte und LED-Treiber fehlen"
+Gesamtselektivitaet;Missing;"B20/B6 nicht bewiesen; zwei identische B20 in Serie"
+RCD / SPD / PE-PA / Bahn-Erdung;Missing;Schnittstellen und Geraetekonzept nicht freigegeben
+Licht-Sollwerte / Blendung / Sicherheitsbeleuchtung;Missing;Anforderungen und abschliessende Bewertung fehlen
+Anzeige / Beschallung / Zusatzlasten;Missing;Keine Anschlussdaten
+Technische Gesamtplanung;Missing;Wesentliche reale Nachweise offen

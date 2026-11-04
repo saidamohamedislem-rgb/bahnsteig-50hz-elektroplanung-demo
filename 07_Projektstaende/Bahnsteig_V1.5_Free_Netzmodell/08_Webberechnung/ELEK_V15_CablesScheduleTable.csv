@@ -1,0 +1,4 @@
+﻿Connected to;Connected from;Active (mmÂ²);No. ccts;Neutral (mmÂ²);No. ccts;Earth (mmÂ²);No. ccts;Length of run (m);Phases;Phase conductor;Cores;Insulation;Installation method;Conduit size;Derating factor;Highest load current (A);Current rating - derated (A);Operating temperature (Â°C);Dictating factor
+UV-01 DEMO A-B;Network Feeder;6;1;6;1;6;1;10;3 ph;Cu;Multi-core;Thermoplastic (70Â°C);D1 Enclosed in ducts in the ground;1 x 32 mm;1;0.47;38;20.01;SC
+A - 6 Leuchten 102W DEMO;UV-01 DEMO A-B;1.5;1;1.5;1;4;1;109.7;1 ph;Cu;Multi-core;Thermoplastic (70Â°C);D1 Enclosed in ducts in the ground;1 x 25 mm;1;0.47;22;20.03;Current
+B - 6 Leuchten 102W DEMO;UV-01 DEMO A-B;1.5;1;1.5;1;4;1;119.7;1 ph;Cu;Multi-core;Thermoplastic (70Â°C);D1 Enclosed in ducts in the ground;1 x 25 mm;1;0.47;22;20.03;Current

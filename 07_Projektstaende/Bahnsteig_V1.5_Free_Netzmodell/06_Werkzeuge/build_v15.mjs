@@ -1,0 +1,28 @@
+import fs from 'node:fs/promises';
+import {Workbook,SpreadsheetFile} from '@oai/artifact-tool';
+const root='outputs/Bahnsteig_V1.5_Free_Netzmodell';
+const w=Workbook.create(),s=w.worksheets.add('Modellvergleich'),n=w.worksheets.add('Native Tabellen');
+function write(sh,cell,rows){let len=Math.max(...rows.map(r=>r.length));sh.getRange(cell).values=rows.map(r=>[...r,...Array(len-r.length).fill(null)]);}
+write(s,'A2',[['Bahnsteig V1.5 - A/B Netzmodell']]);
+write(s,'A4',[['Szenario','Preliminary: TN, 3 kA Quelle, D1, Cu/PVC70. Keine Auslegungsfreigabe.']]);
+write(s,'A6',[['Gemeinsame Eingaben','Wert','Einheit'],['U0',230,'V'],['cos phi',.95,'-'],['rho Cu Referenz',.0225,'Ohm mm2/m'],['B6 oberer Magnetfaktor',5,'x In'],['Abgang In',6,'A'],['Gesamt-VD Szenariolimit',3,'%'],['Zuleitung VD nativ',.012,'%']]);
+write(s,'A16',[['Groesse','A (L1)','B (L2)','Einheit / Bedeutung'],['Nennlast',102,102,'W: je sechs echte Leuchten'],['I nominal',null,null,'A = P/(U0 cos phi)'],['I ELEK Eingabe',.47,.47,'A: UI-Raster 0.01 A'],['P Ersatzlast',null,null,'W: simuliert bei U0'],['Rundungsaufschlag',null,null,'% gegen nominal'],['Laenge Ersatzweg',109.7,119.7,'m: alle Lasten am letzten Punkt'],['Querschnitt L/N',1.5,1.5,'mm2; PE separat 4 mm2'],['VD R Referenz',null,null,'V: nur resistiv, rho Referenz'],['VD R Referenz',null,null,'%'],['VD ELEK Abgang',1.472,1.606,'V: Originalausgabe'],['VD ELEK Abgang',.640,.698,'%: Originalausgabe'],['VD ELEK gesamt',null,null,'% inkl. Zuleitung'],['Zs real',2.3445,2.5507,'Ohm: ELEK Szenario'],['Zs imaginaer',.0881,.0897,'Ohm: ELEK Szenario'],['Ief Referenz',null,null,'A = U0 / Betrag Zs'],['Ief ELEK',98.03,90.12,'A: Originalausgabe'],['Ia B6 Referenz',null,null,'A: oberer Magnetwert 5 x In'],['Zs max Referenz',null,null,'Ohm = U0/Ia'],['Iz ELEK',22,22,'A: D1, Korrekturfaktor 1'],['Beruehrungsspannung',60.50,60.68,'V: vor Abschaltung, kein Dauerwert'],['VD Szenariolimit',null,null,'Kein Normkonformitaetsnachweis'],['Ia Vergleich',null,null,'Bedingt auf angenommene TN-Daten']]);
+for(const col of ['B','C']){
+ const f={18:`=${col}17/$B$7/$B$8`,20:`=${col}19*$B$7*$B$8`,21:`=(${col}20/${col}17-1)*100`,24:`=2*$B$9*${col}22*${col}19*$B$8/${col}23`,25:`=${col}24/$B$7*100`,28:`=${col}27+$B$13`,31:`=$B$7/SQRT(${col}29^2+${col}30^2)`,33:'=$B$10*$B$11',34:`=$B$7/${col}33`,37:`=IF(${col}28<=$B$12,"unter Szenariolimit","ueber Szenariolimit")`,38:`=IF(${col}32>${col}33,"Ief > Ia (bedingt)","Ief <= Ia")`};
+ for(const [r,formula] of Object.entries(f))s.getRange(`${col}${r}`).formulas=[[formula]];
+}
+write(s,'A41',[['Grenzen'],['Keine nachgewiesene Gesamtselektivitaet B20/B6; zwei B20-Stufen in Serie im nativen Modell.'],['Icn, reales Ik min/max, Treiber-Einschaltstrom, RCD, SPD und Bahn-PA fehlen.'],['Referenzformeln rechnen nur die gezeigten Eingaben neu. Native ELEK-Werte sind gespeicherte Ergebnisse.'],['Geaenderte Kabel-/Netzparameter brauchen einen neuen nativen Softwarelauf.'],['V1.3-XLSX bleibt separater historischer Vergleich: verteilte Lasten, 2.5 mm2.'],['Quellen: ELEK_V15_Nativer_Netzbericht.pdf S. 3-7 / Kennlinienvergleich S. 1-3, 04.11.2026.'],['https://elek.com/electrical-software/cable-pro-web-iec60364/'],['https://cache.industry.siemens.com/dl/files/792/45302792/att_1328163/v1/MAN_L1V30914799-04_en_en-US.pdf']]);
+const data=JSON.parse(await fs.readFile(root+'/08_Webberechnung/ELEK_V15_Ergebnistabellen.json','utf8'));
+let row=2,headers=[];for(const [title,table]of Object.entries(data.tables)){if(!table?.length)continue;write(n,`A${row}`,[[title]]);row+=2;headers.push(row);write(n,`A${row}`,table);row+=table.length+3;}
+for(const [sh,range]of [[s,'A1:D50'],[n,`A1:O${row}`]]){sh.showGridLines=false;sh.getRange(range).format.font.name='Arial';sh.getRange(range).format.font.size=10;sh.getRange(range).format.rowHeight=23;sh.getRange(range).format.columnWidth=21;}
+s.getRange('A6:A38').format.columnWidth=29;s.getRange('B16:C38').format.columnWidth=25;s.getRange('D16:D38').format.columnWidth=50;s.getRange('B7:B13').format.fill='#FFF2CC';s.getRange('B19:C19').format.fill='#FFF2CC';s.getRange('B22:C23').format.fill='#FFF2CC';s.getRange('B17:C36').setNumberFormat('0.000');
+for(const a of ['A6:C6','A16:D16']){s.getRange(a).format.fill='#233448';s.getRange(a).format.font.color='#FFFFFF';}
+for(const r of headers){n.getRange(`A${r}:O${r}`).format.wrapText=true;n.getRange(`A${r}:O${r}`).format.rowHeight=60;n.getRange(`A${r}:O${r}`).format.fill='#233448';n.getRange(`A${r}:O${r}`).format.font.color='#FFFFFF';}
+n.getRange(`A1:B${row}`).format.columnWidth=37;n.getRange(`A1:O${row}`).format.wrapText=true;n.getRange(`A1:O${row}`).format.autofitRows();
+w.recalculate();
+console.log((await w.inspect({kind:'table',range:'Modellvergleich!A17:D38',include:'values,formulas',tableMaxRows:22,tableMaxCols:4,maxChars:5500})).ndjson);
+console.log((await w.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!',options:{useRegex:true,maxResults:20},summary:'Final formula scan'})).ndjson);
+const before=s.getRange('B24').values[0][0];s.getRange('B22').values=[[219.4]];const after=s.getRange('B24').values[0][0];if(Math.abs(after-2*before)>1e-9)throw Error('Length dependency failed');s.getRange('B22').values=[[109.7]];w.recalculate();
+await(await SpreadsheetFile.exportXlsx(w)).save(root+'/03_Elektro/Bahnsteig_V15_Modellvergleich.xlsx');
+for(const[sh,range,name]of[['Modellvergleich','A16:D38','08_V15_Modellvergleich.png'],['Native Tabellen','A2:D14','09_V15_NativeTabellen.png']]){const b=await w.render({sheetName:sh,range,scale:1.3});await fs.writeFile(root+'/04_Screenshots/'+name,new Uint8Array(await b.arrayBuffer()));}
+console.log(JSON.stringify({lengthDependency:true,before,after}));

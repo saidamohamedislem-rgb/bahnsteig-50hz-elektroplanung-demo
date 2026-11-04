@@ -1,0 +1,53 @@
+{
+  "checked_date": "2026-11-04",
+  "luminaire_count": 12,
+  "all_positions_equal_prior_native_CAD_verification": true,
+  "coordinates_checked_against_expected": true,
+  "report_pages": 15,
+  "Emean_lx": 18.1,
+  "Emin_lx": 7.96,
+  "Emax_lx": 36,
+  "U0": 0.44,
+  "CAD_units_per_meter": 1000,
+  "CAD_translation_m": [
+    0,
+    0,
+    0
+  ],
+  "CAD_rotation_deg": [
+    0,
+    0,
+    0
+  ],
+  "reference_layers_hidden": [
+    "LIGHT_A",
+    "LIGHT_B",
+    "CABLE_A",
+    "CABLE_B"
+  ],
+  "recalculated": false,
+  "reason": "Only construction-aid CAD drawing added; calculation geometry preserved. Full 3D model not imported because it contains existing platform and canopy.",
+  "skills": [
+    "computer-use",
+    "verified-improvement",
+    "pdf"
+  ],
+  "sources_checked": [
+    "https://relux.com/knowledge-hub/knowledge-db/relux-desktop/import-and-export/construct-scene-from-cad-plan",
+    "https://relux.com/lighting-planning/reluxdesktop"
+  ],
+  "cost": "No paid services used",
+  "limitations": [
+    "Existing simplified canopy slab retained; detailed support geometry not imported.",
+    "Existing provisional heights and materials retained; no compliance assessment.",
+    "Native report retains original project date and address placeholder."
+  ],
+  "files": {
+    "Bahnsteig_Beleuchtung_V1.2_Lageplan.rdf": "6211b37294743eb7bd7a77c83ff32a95e7d594fd78b0c338cbf8b0facfd5fa90",
+    "Bahnsteig_Lageplan_Original_Compatible.dwg": "fbdf28e8c25e832326b7b90714bcc80a72197f339b05a6660ca0642a8e19c8a9",
+    "Bahnsteig_V1.2_PreImport_Backup.rdf": "73499cf3682adbc3d5acf906c980d57d0611bfc957207338c3cf7463942060ea",
+    "Bahnsteig_V1.2_Relux_Report.pdf": "9f858045c7167bb03473863c2522b922073ab9fdebb09f5926b9a33eaba8af9b",
+    "Electrical_Documentation_Separate\\Stromlaufplan_UV01_V0.3.dwg": "01cadb50e6236acf56385d8d251b0cf532253fbac0b91de74167ff55acf8a884",
+    "Electrical_Documentation_Separate\\Stromlaufplan_UV01_V0.3.dxf": "d2c572b39d2aeef76099c864bc90a684bda707f40f165c2ecebb00d7d4c6dab3"
+  }
+}

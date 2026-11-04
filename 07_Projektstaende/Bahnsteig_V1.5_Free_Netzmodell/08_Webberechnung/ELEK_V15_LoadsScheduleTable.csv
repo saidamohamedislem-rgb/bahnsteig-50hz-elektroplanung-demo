@@ -1,0 +1,4 @@
+﻿Load;Non-linear;L1 (A);L1 - Power factor ;L1 - THD (%);L2 (A);L2 - Power factor ;L2 - THD (%);L3 (A);L3 - Power factor ;L3 - THD (%);Neutral (A);Neutral angle (Â°)
+UV-01 DEMO A-B;-;-;-;-;-;-;-;-;-;-;-;-
+A - 6 Leuchten 102W DEMO;No;0.47;0.95 lagging;-;0;0 lagging;-;0;0 lagging;-;-0.45 -0.15 i;-161.81
+B - 6 Leuchten 102W DEMO;No;0;0 lagging;-;0.47;0.95 lagging;-;0;0 lagging;-;0.35 -0.31 i;-41.81
