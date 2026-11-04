@@ -31,7 +31,11 @@ oder der Deutschen Bahn.
 
 ## Status
 
-## Aktueller Arbeitsstand V1.6 - native SIMARIS-Rechnung, 04.11.2026
+## Aktueller Zwischenstand V1.7 - Mohamed Saida, 04.11.2026
+
+[V1.7 Detailplanung](07_Projektstaende/Bahnsteig_V1.7_Detailplanung/README.md): separat gespeichertes natives SIMARIS-Projekt mit Planner Mohamed Saida und neue Formelmappe für 12 Leuchten / 24 Leitungsabschnitte. Referenz-Spannungsfall maximal A 0,329376 %, B 0,387322 %. Abschnittsrechnung und Eingabeabhängigkeiten geprüft. Native V16-Originalberichte bleiben historisch erhalten; neue V17-Berichte/Schriftfelder und CAD-Detailplan sind noch ausstehend. Technische Gesamtplanung weiterhin unvollständig. [Fortsetzung ab diesem Stand](07_Projektstaende/Bahnsteig_V1.7_Detailplanung/FORTSETZUNG.md).
+
+## Historischer Arbeitsstand V1.6 - native SIMARIS-Rechnung, 04.11.2026
 
 Die [V1.6-Lieferung](07_Projektstaende/Bahnsteig_V1.6_SIMARIS/README.md) ergänzt das erhaltene Licht-/CAD-Projekt um einen tatsächlich dimensionierten SIMARIS-design-27.0.1-Entwurf. Enthalten sind SDX/SX, nativer DWG-Export, echte RTF/CSV, 12-seitige Dokumentation, fünfseitige Kennlinien und Netzansichten sowie eine dreiseitige Lesefassung. Zwei Ersatzlasten A/B je 102 W; kumulierter Spannungsfall 0,596 / 0,649 %, minimale Endfehlerströme 59,029 / 54,374 A. Messages [0].
 

@@ -1,0 +1,13 @@
+(vl-load-com)
+(setq doc (vla-get-ActiveDocument (vlax-get-acad-object)))
+(setq dir "C:/Users/mouha/Documents/Codex/2026-11-04/remote-desktop-commander-https-files-openai-4/outputs/Bahnsteig_V1.3_Final/02_CAD/")
+(setq base (if (wcmatch (vla-get-Name doc) "*Lageplan*") "Bahnsteig_V13_Lageplan" "Bahnsteig_V13_Stromlaufplan"))
+(if (wcmatch base "*Lageplan*") (setvar "INSUNITS" 6) (setvar "INSUNITS" 4))
+(command "_VPOINT" "0,0,1")
+(command "_ZOOM" "_E")
+(vla-saveas doc (strcat dir base ".dwg") 64)
+(foreach nv '(("PDFLAYOUTSTOEXPORT" 0) ("PDFPAPERSIZEOVERRIDE" 1) ("PDFOVERRIDDENPAPERWIDTH" 420.0) ("PDFOVERRIDDENPAPERHEIGHT" 297.0) ("PDFZOOMTOEXTENTSMODE" 1) ("PDFUSEPLOTSTYLES" 0)) (vl-catch-all-apply 'setvar nv))
+(command "_EXPORTPDF" (strcat dir base ".pdf"))
+(vla-save doc)
+(princ)
+

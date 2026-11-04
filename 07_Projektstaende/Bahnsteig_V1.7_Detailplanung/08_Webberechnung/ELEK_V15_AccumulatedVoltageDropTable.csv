@@ -1,0 +1,8 @@
+﻿Name;Active (mmÂ²);No. ccts;Circuit rating - derated (A);Accumulated voltage drop (%);Voltage drop (%);Voltage drop (V);Max. allowed voltage drop (%);Length of run (m);Max. length of run (m)
+Voltage drop of electrical installation 0.71 % (allowable limit 3 %);-;-;-;-;-;-;-;-;-
+From source to A - 6 Leuchten 102W DEMO;-;-;-;-;-;-;-;-;-
+UV-01 DEMO A-B;6;1;38;0.012;0.012;0.046;0.5;10;434.16
+A - 6 Leuchten 102W DEMO;1.5;1;22;0.652;0.64;1.472;1.5;109.7;257.11
+From source to B - 6 Leuchten 102W DEMO;-;-;-;-;-;-;-;-;-
+UV-01 DEMO A-B;6;1;38;0.012;0.012;0.046;0.5;10;434.16
+B - 6 Leuchten 102W DEMO;1.5;1;22;0.71;0.698;1.606;1.5;119.7;257.11

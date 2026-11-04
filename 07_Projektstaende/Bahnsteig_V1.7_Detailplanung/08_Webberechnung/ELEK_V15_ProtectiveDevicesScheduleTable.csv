@@ -1,0 +1,5 @@
+﻿Name;Installed switchboard;Device type;Device information;Rating (A);Rated voltage (V);Test standard;Max. disconnection time (s);Tripping current (A) @ Max. discon. time
+F0 DEMO B20;Supply;MCB;Generic, Generic, Model 1, 20 A, B;20;-;IEC/EN 60898-1;0.4;100
+F0 DEMO B20;UV-01 DEMO A-B (Incomer);MCB;Generic, Generic, Model 1, 20 A, B;20;-;IEC/EN 60898-1;0.4;100
+FA DEMO B6;UV-01 DEMO A-B;MCB;Generic, Generic, Model 1, 6 A, B;6;-;IEC/EN 60898-1;0.4;30
+FB DEMO B6;UV-01 DEMO A-B;MCB;Generic, Generic, Model 1, 6 A, B;6;-;IEC/EN 60898-1;0.4;30

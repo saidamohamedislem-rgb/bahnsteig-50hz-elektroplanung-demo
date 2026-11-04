@@ -1,0 +1,100 @@
+{
+  "date": "2026-11-04",
+  "version": "V1.7 Detailplanung - Zwischenstand",
+  "author": "Mohamed Saida",
+  "engineering_complete": false,
+  "new_native_electrical_calculation": false,
+  "native_model": "V1.6 A/B preserved; metadata updated in separate V1.7 SDX",
+  "new_detail_workbook": {
+    "author": "Mohamed Saida",
+    "results": [
+      {
+        "ID": "L01",
+        "Circuit": "A",
+        "Power_W": 18.5,
+        "deltaU_percent": 0.03964355610316289
+      },
+      {
+        "ID": "L02",
+        "Circuit": "B",
+        "Power_W": 18.5,
+        "deltaU_percent": 0.09758994787247327
+      },
+      {
+        "ID": "L03",
+        "Circuit": "A",
+        "Power_W": 18.5,
+        "deltaU_percent": 0.13451657007840637
+      },
+      {
+        "ID": "L04",
+        "Circuit": "B",
+        "Power_W": 18.5,
+        "deltaU_percent": 0.19246296184771675
+      },
+      {
+        "ID": "L05",
+        "Circuit": "A",
+        "Power_W": 14,
+        "deltaU_percent": 0.20677912922601693
+      },
+      {
+        "ID": "L06",
+        "Circuit": "B",
+        "Power_W": 14,
+        "deltaU_percent": 0.2647255209953273
+      },
+      {
+        "ID": "L07",
+        "Circuit": "A",
+        "Power_W": 14,
+        "deltaU_percent": 0.2647255209953273
+      },
+      {
+        "ID": "L08",
+        "Circuit": "B",
+        "Power_W": 14,
+        "deltaU_percent": 0.32267191276463764
+      },
+      {
+        "ID": "L09",
+        "Circuit": "A",
+        "Power_W": 18.5,
+        "deltaU_percent": 0.3083557453863375
+      },
+      {
+        "ID": "L10",
+        "Circuit": "B",
+        "Power_W": 18.5,
+        "deltaU_percent": 0.3663021371556478
+      },
+      {
+        "ID": "L11",
+        "Circuit": "A",
+        "Power_W": 18.5,
+        "deltaU_percent": 0.32937551494971473
+      },
+      {
+        "ID": "L12",
+        "Circuit": "B",
+        "Power_W": 18.5,
+        "deltaU_percent": 0.3873219067190251
+      }
+    ],
+    "independent_all12": true,
+    "length_dependency": true,
+    "zero_load_dependency": true
+  },
+  "checks_passed": [
+    "Relux, existing CAD, foundations and ELEK source files byte-identical to V1.6",
+    "Saved SDX integrity and Mohamed Saida metadata confirmed",
+    "XLSX archive intact, no stored error cells; all 12 independent route checks and input-change tests passed; views rendered"
+  ],
+  "pending": [
+    "V1.7 native reports/drawing exports under requested name",
+    "12-load native detail model",
+    "CAD detail schematic",
+    "Real source/LED/protection/selectivity/earthing/SPD data and approvals"
+  ],
+  "cost_new_EUR": 0
+}
