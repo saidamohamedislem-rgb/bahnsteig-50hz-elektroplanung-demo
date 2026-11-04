@@ -1,0 +1,166 @@
+{
+    "Native_SIMARIS_project":  false,
+    "Status":  "INPUT_PREPARATION_ONLY",
+    "Frequency_Hz":  50,
+    "Circuits":  [
+                     {
+                         "Circuit":  "A",
+                         "Count":  6,
+                         "Nominal_W":  102,
+                         "Luminaire_IDs":  "L01,L03,L05,L07,L09,L11",
+                         "Voltage_V":  "UNKNOWN",
+                         "Power_factor":  "UNKNOWN",
+                         "Cable_type":  "NOT_DIMENSIONED",
+                         "Cable_length_m":  "NOT_SURVEYED",
+                         "Protection":  "NOT_SELECTED",
+                         "Design_current_A":  "NOT_CALCULATED"
+                     },
+                     {
+                         "Circuit":  "B",
+                         "Count":  6,
+                         "Nominal_W":  102,
+                         "Luminaire_IDs":  "L02,L04,L06,L08,L10,L12",
+                         "Voltage_V":  "UNKNOWN",
+                         "Power_factor":  "UNKNOWN",
+                         "Cable_type":  "NOT_DIMENSIONED",
+                         "Cable_length_m":  "NOT_SURVEYED",
+                         "Protection":  "NOT_SELECTED",
+                         "Design_current_A":  "NOT_CALCULATED"
+                     }
+                 ],
+    "Loads":  [
+                  {
+                      "ID":  "L01",
+                      "Circuit":  "A",
+                      "Group":  "Open_Left",
+                      "X_m":  "5",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.5",
+                      "Power_W":  "18.5",
+                      "LDT":  "DB_Schmidt_Strahl_18p5W_BB_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L02",
+                      "Circuit":  "B",
+                      "Group":  "Open_Left",
+                      "X_m":  "15",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.5",
+                      "Power_W":  "18.5",
+                      "LDT":  "DB_Schmidt_Strahl_18p5W_BB_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L03",
+                      "Circuit":  "A",
+                      "Group":  "Open_Left",
+                      "X_m":  "25",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.5",
+                      "Power_W":  "18.5",
+                      "LDT":  "DB_Schmidt_Strahl_18p5W_BB_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L04",
+                      "Circuit":  "B",
+                      "Group":  "Open_Left",
+                      "X_m":  "35",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.5",
+                      "Power_W":  "18.5",
+                      "LDT":  "DB_Schmidt_Strahl_18p5W_BB_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L05",
+                      "Circuit":  "A",
+                      "Group":  "Canopy",
+                      "X_m":  "45",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.3",
+                      "Power_W":  "14.0",
+                      "LDT":  "DB_Schmidt_Strahl_14W_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L06",
+                      "Circuit":  "B",
+                      "Group":  "Canopy",
+                      "X_m":  "55",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.3",
+                      "Power_W":  "14.0",
+                      "LDT":  "DB_Schmidt_Strahl_14W_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L07",
+                      "Circuit":  "A",
+                      "Group":  "Canopy",
+                      "X_m":  "65",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.3",
+                      "Power_W":  "14.0",
+                      "LDT":  "DB_Schmidt_Strahl_14W_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L08",
+                      "Circuit":  "B",
+                      "Group":  "Canopy",
+                      "X_m":  "75",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.3",
+                      "Power_W":  "14.0",
+                      "LDT":  "DB_Schmidt_Strahl_14W_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L09",
+                      "Circuit":  "A",
+                      "Group":  "Open_Right",
+                      "X_m":  "85",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.5",
+                      "Power_W":  "18.5",
+                      "LDT":  "DB_Schmidt_Strahl_18p5W_BB_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L10",
+                      "Circuit":  "B",
+                      "Group":  "Open_Right",
+                      "X_m":  "95",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.5",
+                      "Power_W":  "18.5",
+                      "LDT":  "DB_Schmidt_Strahl_18p5W_BB_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L11",
+                      "Circuit":  "A",
+                      "Group":  "Open_Right",
+                      "X_m":  "105",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.5",
+                      "Power_W":  "18.5",
+                      "LDT":  "DB_Schmidt_Strahl_18p5W_BB_4000K.LDT"
+                  },
+                  {
+                      "ID":  "L12",
+                      "Circuit":  "B",
+                      "Group":  "Open_Right",
+                      "X_m":  "115",
+                      "Y_m":  "2.0",
+                      "Z_m":  "4.5",
+                      "Power_W":  "18.5",
+                      "LDT":  "DB_Schmidt_Strahl_18p5W_BB_4000K.LDT"
+                  }
+              ],
+    "Required_inputs":  [
+                            "Supply voltage and phases",
+                            "Earthing system and source short-circuit impedance/current",
+                            "Actual cable routes, lengths and installation methods",
+                            "Cable material, cross-sections, grouping and ambient conditions",
+                            "Driver power factor and inrush current",
+                            "Protection devices, trip characteristics and disconnection requirements",
+                            "Railway-specific bonding, surge protection and emergency-lighting requirements",
+                            "Project lighting class, target values and accepted maintenance assumptions"
+                        ],
+    "Voltage_drop":  "NOT_CALCULATED",
+    "Short_circuit":  "NOT_CALCULATED",
+    "Selectivity":  "NOT_CALCULATED"
+}

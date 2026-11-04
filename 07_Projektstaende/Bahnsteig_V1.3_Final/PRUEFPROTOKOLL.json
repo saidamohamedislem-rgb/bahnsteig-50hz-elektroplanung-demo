@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-04",
+  "status": "Checkpoint; engineering incomplete",
+  "report_pages": 18,
+  "luminaire_rows_equal_V12": true,
+  "luminaire_count": 12,
+  "nominal_power_W": 204,
+  "Em_lx": 18.1,
+  "Emin_lx": 7.96,
+  "Emax_lx": 37,
+  "U0": 0.44,
+  "DWG_headers": {
+    "Bahnsteig_V13_Lageplan.dwg": "AC1032",
+    "Bahnsteig_V13_Modell3D.dwg": "AC1018",
+    "Bahnsteig_V13_Relux_Koordination.dwg": "AC1018",
+    "Bahnsteig_V13_Stromlaufplan.dwg": "AC1032"
+  },
+  "xlsx_formula_count": 39,
+  "checks_passed": [
+    "PDF files parsed/rendered",
+    "12 native report positions unchanged versus V1.2",
+    "Expected luminaire coordinates",
+    "A/B loads independently summed",
+    "Ohmic voltage-drop scenario independently recomputed",
+    "XLSX formulas present; no cached error cells",
+    "Each V1.2 backup byte-identical to its respective source",
+    "Native CAD bounds exported"
+  ],
+  "essential_missing": [
+    "Lichtklasse / Grenzwerte / Blendung",
+    "Kurzschluss und Abschaltung",
+    "Kabelbemessung und Schutzgeräte",
+    "Selektivität",
+    "SPD / PE / PA / Bahn-Erdung",
+    "Sicherheitsbeleuchtung / weitere Verbraucher",
+    "Vollständige technische Planung"
+  ]
+}

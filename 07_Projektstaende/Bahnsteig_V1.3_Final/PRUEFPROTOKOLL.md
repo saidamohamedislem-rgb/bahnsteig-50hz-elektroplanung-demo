@@ -1,0 +1,5 @@
+# Qualitätsprüfung und Übergabe
+
+04.11.2026. Die zwölf nativen Relux-Leuchtenzeilen wurden unverändert mit dem V1.2-Bericht verglichen und mit den Sollkoordinaten abgeglichen. Nominalleistungen und A/B-Aufteilung wurden unabhängig summiert; die ohmsche Vorberechnung unabhängig nachgerechnet. Native DWG-Dateien wurden in BricsCAD geöffnet/gespeichert: Lageplan/Stromlaufplan AC1032, Relux-Koordination/3D AC1018. Relux- und CAD-PDFs wurden tatsächlich gelesen, gerendert und visuell geprüft; die Gesamtdatei umfasst 18 Seiten. XLSX wurde neu berechnet, drei Blätter visuell geprüft; Formeln sind vorhanden, keine gespeicherten Fehlerzellen. Jede der beiden gesicherten V1.2-RDF-Dateien ist bytegleich mit ihrer jeweiligen Quelldatei. Geometriegrenzen siehe 05_Grundlagen/CAD_Geometriepruefung_V13.txt.
+
+Die Prüfung bestätigt Dateien, Modellabgleich und Rechenszenario. Sie bestätigt keine vollständige elektrische Auslegung oder Normerfüllung. Offene wesentliche Nachweise stehen in PRUEFSTATUS.csv und FORTSETZUNG.md. Technischer Projektabschluss steht aus. Keine zusätzlichen Kosten verursacht.

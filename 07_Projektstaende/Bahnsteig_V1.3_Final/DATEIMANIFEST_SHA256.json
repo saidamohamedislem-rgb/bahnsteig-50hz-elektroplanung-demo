@@ -1,0 +1,226 @@
+{
+  ".gitattributes": {
+    "bytes": 9,
+    "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+  },
+  "01_Relux/Bahnsteig_Beleuchtung_V1.3_Final.rdf": {
+    "bytes": 311296,
+    "sha256": "95975eb6685bb2adda59942eef97583b30eb355838e3ff771719c6169bc31a88"
+  },
+  "01_Relux/Bahnsteig_Beleuchtung_V1.3_Final.rdf.log": {
+    "bytes": 3524,
+    "sha256": "0294b652331bc9bac092f1a8e5e7bc2bbf8c6c59b0431938ba0730e68af51e9f"
+  },
+  "01_Relux/Canopy_Supports_V13.obj": {
+    "bytes": 8983,
+    "sha256": "f423577d23732bbe5b8f18e68a4dcbfaac4a7959b375c36f459fa71fc9b1ef0a"
+  },
+  "01_Relux/DB_Schmidt_Strahl_14W_4000K.LDT": {
+    "bytes": 29917,
+    "sha256": "02aa003f6795cf777b76ec8cfcf49c3a36cb7ab8a29a12d103cb945169369989"
+  },
+  "01_Relux/DB_Schmidt_Strahl_18p5W_BB_4000K.LDT": {
+    "bytes": 16132,
+    "sha256": "c81c90ae64c0c1d1bf776749b85a484f84a18127d63abe0e547f1350358efd09"
+  },
+  "01_Relux/Relux_V13_Final_FalseColours.pdf": {
+    "bytes": 391542,
+    "sha256": "10aab74c63daaeb369ef1e9a047c23244d42e6e8b6603c42fd9ec0807107d7cb"
+  },
+  "01_Relux/Relux_V13_Final_Gesamtbericht.pdf": {
+    "bytes": 1413357,
+    "sha256": "35ccb1f131c2702bb535390f054b24c6165ef9fda89cb53acffbe409f590351a"
+  },
+  "01_Relux/Relux_V13_Final_Tabellen_Isolux.pdf": {
+    "bytes": 1022452,
+    "sha256": "0f2ebd81a6db09a61f68a188b9c5c316f7ab890875d58cfefaff6f5e6dba57c8"
+  },
+  "02_CAD/Bahnsteig_V13_Lageplan.dwg": {
+    "bytes": 51839,
+    "sha256": "b176c785f1dd536ea6137fee050c2faad538586247bd708aa1a846a7bf3ec338"
+  },
+  "02_CAD/Bahnsteig_V13_Lageplan.dxf": {
+    "bytes": 13787,
+    "sha256": "c0422545fb7d8b7ff9febed05b3376dbff626948999351749b91b715e5825beb"
+  },
+  "02_CAD/Bahnsteig_V13_Lageplan.pdf": {
+    "bytes": 63218,
+    "sha256": "65bc1c9f3b68c4d28a3ab11bdb1703b3410bcba4d87cacd9199436865688775b"
+  },
+  "02_CAD/Bahnsteig_V13_Modell3D.dwg": {
+    "bytes": 621544,
+    "sha256": "0b7d618d04f6c61860732cb2feb5c39d16ac4846912f4b04de9b35c408f4e65e"
+  },
+  "02_CAD/Bahnsteig_V13_Relux_Koordination.dwg": {
+    "bytes": 69450,
+    "sha256": "6a583a7f76aaa7e081c83e4d1dda11e77dea8b5c4d3926acb65fbca1bd3abac5"
+  },
+  "02_CAD/Bahnsteig_V13_Stromlaufplan.dwg": {
+    "bytes": 81858,
+    "sha256": "742603cdcaa3a356fc7268ddac106a791f65f934aaca9c2ab2f7d6749df595a0"
+  },
+  "02_CAD/Bahnsteig_V13_Stromlaufplan.dxf": {
+    "bytes": 8359,
+    "sha256": "196866097c1edb2efb09031173af6b5ad201d8cd5b7d1f63f240039f88a7ffc6"
+  },
+  "02_CAD/Bahnsteig_V13_Stromlaufplan.pdf": {
+    "bytes": 79450,
+    "sha256": "92d92421b37e0459d120679620e720c899fafe2da90251dbee85b5157740a821"
+  },
+  "03_Elektro/Bahnsteig_V13_Berechnungen.xlsx": {
+    "bytes": 8811,
+    "sha256": "4b0bbd123cca0e4390fe7eb79dfebfedf4915512b62c03c705c8362c67470489"
+  },
+  "03_Elektro/ELEKTROPLANUNG_Stand.md": {
+    "bytes": 3288,
+    "sha256": "b14634d5064c3244542a072bd62df6c27976df3501dde8865aaceb457f20853d"
+  },
+  "03_Elektro/Leuchten_und_Stromkreise.csv": {
+    "bytes": 858,
+    "sha256": "dae17f6d4a0604b28c939137fc3b73c9a48325152fd0490a803eb78d422fd47c"
+  },
+  "04_Screenshots/01_BricsCAD_Koordiniertes3D.jpg": {
+    "bytes": 119904,
+    "sha256": "f40b0e0418ce2bb8c929ebe5f60fa740803de2d9f9769e3397070a06bb5036d3"
+  },
+  "04_Screenshots/02_BricsCAD_Lageplan.jpg": {
+    "bytes": 131996,
+    "sha256": "484e568ebf464ec229ba225425693b64d5ed76f6d21489bb7cf72e0e00c0b4ca"
+  },
+  "04_Screenshots/03_Relux_Isolux.jpg": {
+    "bytes": 84060,
+    "sha256": "2e5bae8163c81bd904fd0628519c42481a484e468fbba2da38bf1ec3948c5a62"
+  },
+  "04_Screenshots/04_Relux_FalseColours_Stand.jpg": {
+    "bytes": 87630,
+    "sha256": "c7d163ec2a52581d7f878d1aa51f80f65b61aff3e1d8686621c3c934b95a29d6"
+  },
+  "04_Screenshots/05_BricsCAD_Stromlaufplan.jpg": {
+    "bytes": 136321,
+    "sha256": "0990edc6ecf08e24eb32ee2aa1cbbfbd3314d9ad2350414fa5ed760d78004038"
+  },
+  "04_Screenshots/Tabelle_calc.png": {
+    "bytes": 80080,
+    "sha256": "50855f694d3e64f17322c17a5a5957e5e5a56dc6f73eb94527120934267b2f45"
+  },
+  "04_Screenshots/Tabelle_loads.png": {
+    "bytes": 58814,
+    "sha256": "c98356df2309106be706ccb3ad31d924a0e0133e4f6a3643a3b6a4119b95369d"
+  },
+  "04_Screenshots/Tabelle_status.png": {
+    "bytes": 81625,
+    "sha256": "236ce5571b213cc7d61ca7e833c351bdd4b28d02b1aa9e4c59409ef913a5f701"
+  },
+  "04_Screenshots/VERZEICHNIS.md": {
+    "bytes": 1011,
+    "sha256": "ab963117f300346f62cc259b597082d36bf42339fc8c7f425849c945944c12ce"
+  },
+  "05_Grundlagen/Bahnsteig_Lageplan_Original_Compatible.dwg": {
+    "bytes": 13917,
+    "sha256": "fbdf28e8c25e832326b7b90714bcc80a72197f339b05a6660ca0642a8e19c8a9"
+  },
+  "05_Grundlagen/Bahnsteig_V1.2_Relux_Report.pdf": {
+    "bytes": 553581,
+    "sha256": "9f858045c7167bb03473863c2522b922073ab9fdebb09f5926b9a33eaba8af9b"
+  },
+  "05_Grundlagen/BRICSCAD_NATIVE_VERIFICATION.json": {
+    "bytes": 9627,
+    "sha256": "e5f521fe318d5b2f1188089e9717a807307fb4a912ec0a128ac4ad6f61d8f500"
+  },
+  "05_Grundlagen/CAD_Geometriepruefung_V13.txt": {
+    "bytes": 7242,
+    "sha256": "e2f07d2e52d18ca13e45a3e1523e296e1b274f3701788db68b8712dd571894b4"
+  },
+  "05_Grundlagen/Existing_3D_V07.dxf": {
+    "bytes": 111479,
+    "sha256": "a46d6af714a098c25325ac9908f2f92d333b4101566fccddd05f5c20cb0f9a74"
+  },
+  "05_Grundlagen/README.md": {
+    "bytes": 722,
+    "sha256": "3b4af356d4b4037af924dfb2278db27da8d237746db10f043309e115247908af"
+  },
+  "05_Grundlagen/SIMARIS_INPUT_PREPARATION.json": {
+    "bytes": 6949,
+    "sha256": "f3a6c55241a611e2b0bffc8770a5ef5a756d7b50d57fbcbbb979b89723f6fa6c"
+  },
+  "05_Grundlagen/Stromlaufplan_UV01_V0.3.dwg": {
+    "bytes": 38851,
+    "sha256": "01cadb50e6236acf56385d8d251b0cf532253fbac0b91de74167ff55acf8a884"
+  },
+  "05_Grundlagen/Stromlaufplan_UV01_V0.3.dxf": {
+    "bytes": 59457,
+    "sha256": "d2c572b39d2aeef76099c864bc90a684bda707f40f165c2ecebb00d7d4c6dab3"
+  },
+  "05_Grundlagen/V1.2_Lageplan_Unveraendert.rdf": {
+    "bytes": 294912,
+    "sha256": "6211b37294743eb7bd7a77c83ff32a95e7d594fd78b0c338cbf8b0facfd5fa90"
+  },
+  "05_Grundlagen/V1.2_PreImport_Backup.rdf": {
+    "bytes": 294912,
+    "sha256": "73499cf3682adbc3d5acf906c980d57d0611bfc957207338c3cf7463942060ea"
+  },
+  "05_Grundlagen/V1.2_Verification.json": {
+    "bytes": 2054,
+    "sha256": "9cd8e42d891ee70b18a1d8fcd9262389d823ca2d974e1cff40e5dee2645efba5"
+  },
+  "06_Werkzeuge/audit_cad.lsp": {
+    "bytes": 659,
+    "sha256": "79adc1cabcac6e3522c5b5fd1a3469d7b4e9442a66fdfb8cb0490c572d69df38"
+  },
+  "06_Werkzeuge/build_calcs.mjs": {
+    "bytes": 6215,
+    "sha256": "0e2ee800d7dc6b3c2a8141466e17bda05a8b3bdfcf943dba5305e2d920ee41fd"
+  },
+  "06_Werkzeuge/cad_model_save.lsp": {
+    "bytes": 562,
+    "sha256": "323a994a52873177e9d3600b8ed111f9f99f883e6767119b8ded5ec063f6ca2f"
+  },
+  "06_Werkzeuge/crop_cad_pdfs.py": {
+    "bytes": 993,
+    "sha256": "82147318a246e50819d287b9757dab3ce8df08b246296165ca42759c652556ff"
+  },
+  "06_Werkzeuge/draw_v13.py": {
+    "bytes": 6591,
+    "sha256": "bd871947247ff2d606ba5007f4e056b74927edcaec0a9746506c307b0fcf5de7"
+  },
+  "06_Werkzeuge/finalize_cad.lsp": {
+    "bytes": 790,
+    "sha256": "c08f3c58cab5b029de95f0679405365a1afcdc22d4f47f4aa3733bf4e9d46331"
+  },
+  "06_Werkzeuge/prepare_v13.py": {
+    "bytes": 1276,
+    "sha256": "852521ae8b9593218d2590c6c01eba09e616754d96eadd9f0bfb46608a9e6ef0"
+  },
+  "06_Werkzeuge/README.md": {
+    "bytes": 842,
+    "sha256": "05594b3c269fd6bd81d03412c8d0fc9f1fbdc6189f6e1b35a11e0bd3b7bd0758"
+  },
+  "BERICHT_GRUNDLAGE.md": {
+    "bytes": 6341,
+    "sha256": "ef9f802a192328321073c7e3c49393d4bea2e57765eef9f09b74dfaaa4d4e8ac"
+  },
+  "FORTSETZUNG.md": {
+    "bytes": 3824,
+    "sha256": "99c9e6fbba13ea42c4d6c8abdbc9653daf69a68d0bdf08329f0a40840c32a967"
+  },
+  "PRUEFPROTOKOLL.json": {
+    "bytes": 1228,
+    "sha256": "930a7c6f775bd03e6f41e5f4b711fb1b4331a936427f5f28f1fcb8273d65cc72"
+  },
+  "PRUEFPROTOKOLL.md": {
+    "bytes": 1121,
+    "sha256": "4c11fb86b0a41ab2beea61db8090ce0d3d5908e92293d20e6473684d27a4f1d6"
+  },
+  "PRUEFSTATUS.csv": {
+    "bytes": 1357,
+    "sha256": "a49398e5dd7353589e6042b1951af1cd4c9ce2e35be556133e71eb60543cfbfa"
+  },
+  "QUELLEN.md": {
+    "bytes": 2201,
+    "sha256": "90fa90fd5f9acfca7a0a0588e0c69dcee21ced419ef560536a17cc6293ee22f7"
+  },
+  "README.md": {
+    "bytes": 2081,
+    "sha256": "7d9d115d9838f1d10370013167d1f653174b435c739c930778369836fabebbd1"
+  }
+}
