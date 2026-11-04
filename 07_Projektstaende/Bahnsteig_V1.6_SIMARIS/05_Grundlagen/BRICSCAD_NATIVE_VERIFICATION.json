@@ -1,0 +1,214 @@
+{
+    "ApplicationVersion":  "26.0 BricsCAD",
+    "File":  "C:\\Users\\mouha\\Downloads\\Bahnsteig_V10_Work_20261104_101229\\Bahnsteig_V11_BricsCAD_Working.dwg",
+    "EntityCounts":  {
+                         "AcDbBlockReference":  15,
+                         "AcDbPolyFaceMesh":  37
+                     },
+    "Blocks":  [
+                   {
+                       "Name":  "rexp_room_102",
+                       "Position":  [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Exterior 2"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_wall_elem_102",
+                       "Position":  [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                       "Attributes":  [
+
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_9",
+                       "Position":  [
+                                        5,
+                                        2,
+                                        4.5
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte  18,5W Optik BB 4000K 18.5 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_9",
+                       "Position":  [
+                                        15,
+                                        2,
+                                        4.5
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte  18,5W Optik BB 4000K 18.5 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_9",
+                       "Position":  [
+                                        25,
+                                        2,
+                                        4.5
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte  18,5W Optik BB 4000K 18.5 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_9",
+                       "Position":  [
+                                        35,
+                                        2,
+                                        4.5
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte  18,5W Optik BB 4000K 18.5 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_13",
+                       "Position":  [
+                                        45,
+                                        2,
+                                        4.3000001907348633
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte 14W 4000K 14 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_13",
+                       "Position":  [
+                                        55,
+                                        2,
+                                        4.3000001907348633
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte 14W 4000K 14 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_13",
+                       "Position":  [
+                                        65,
+                                        2,
+                                        4.3000001907348633
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte 14W 4000K 14 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_13",
+                       "Position":  [
+                                        75,
+                                        2,
+                                        4.3000001907348633
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte 14W 4000K 14 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_9",
+                       "Position":  [
+                                        85,
+                                        2,
+                                        4.5
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte  18,5W Optik BB 4000K 18.5 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_9",
+                       "Position":  [
+                                        95,
+                                        2,
+                                        4.5
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte  18,5W Optik BB 4000K 18.5 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_9",
+                       "Position":  [
+                                        105,
+                                        2,
+                                        4.5
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte  18,5W Optik BB 4000K 18.5 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_lib_l_9",
+                       "Position":  [
+                                        115,
+                                        2,
+                                        4.5
+                                    ],
+                       "Attributes":  [
+                                          {
+                                              "Tag":  "Label",
+                                              "Value":  "Basic-Bahnsteigleuchte  18,5W Optik BB 4000K 18.5 W"
+                                          }
+                                      ]
+                   },
+                   {
+                       "Name":  "rexp_partlist",
+                       "Position":  [
+                                        120.2,
+                                        1.4762050920185477,
+                                        0
+                                    ],
+                       "Attributes":  [
+
+                                      ]
+                   }
+               ]
+}

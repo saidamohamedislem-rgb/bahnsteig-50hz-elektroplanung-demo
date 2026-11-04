@@ -31,7 +31,13 @@ oder der Deutschen Bahn.
 
 ## Status
 
-## Aktueller Arbeitsstand V1.5 - natives Free-Netzmodell, 04.11.2026
+## Aktueller Arbeitsstand V1.6 - native SIMARIS-Rechnung, 04.11.2026
+
+Die [V1.6-Lieferung](07_Projektstaende/Bahnsteig_V1.6_SIMARIS/README.md) ergänzt das erhaltene Licht-/CAD-Projekt um einen tatsächlich dimensionierten SIMARIS-design-27.0.1-Entwurf. Enthalten sind SDX/SX, nativer DWG-Export, echte RTF/CSV, 12-seitige Dokumentation, fünfseitige Kennlinien und Netzansichten sowie eine dreiseitige Lesefassung. Zwei Ersatzlasten A/B je 102 W; kumulierter Spannungsfall 0,596 / 0,649 %, minimale Endfehlerströme 59,029 / 54,374 A. Messages [0].
+
+Die zwölf Relux-Leuchten und alle bisherigen Originalstände bleiben unverändert. Automatisch gewählte gG25/B1/RCD-Geräte sind vorläufig; reale Netzdaten, Quellenkapazität, LED-Inrush, Selektivität, SPD/Bahn-PA und ein verteiltes Detailnetz fehlen. Die technische Gesamtplanung ist nicht abgeschlossen. Kein kostenpflichtiger Plan aktiviert. [Gesprächsleitfaden](07_Projektstaende/Bahnsteig_V1.6_SIMARIS/VORSTELLUNGSGESPRAECH.md) und [Fortsetzung](07_Projektstaende/Bahnsteig_V1.6_SIMARIS/FORTSETZUNG.md). Nachfolgende Versionen sind Historie.
+
+## Historischer Arbeitsstand V1.5 - natives Free-Netzmodell, 04.11.2026
 
 Die [V1.5-Lieferung](07_Projektstaende/Bahnsteig_V1.5_Free_Netzmodell/README.md) enthaelt das tatsaechlich berechnete ELEK-Free-A/B-Netz, native Vorschau-PDFs (7 + 3 Seiten), einen neuen BricsCAD-Stromlaufplan DWG/DXF/PDF, eine Formel-XLSX und aktualisierte Bericht-Grundlagen. Die zwoelf Relux-Leuchten und V1.2-/V1.3-Originalstaende bleiben unveraendert.
 

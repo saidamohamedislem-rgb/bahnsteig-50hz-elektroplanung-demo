@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-04",
+  "version": "V1.6 SIMARIS",
+  "engineering_complete": false,
+  "software": "SIMARIS design 27.0.1, subrevision 2267",
+  "native_dimensioning_executed": true,
+  "native_messages_count": 0,
+  "native_load_count": 2,
+  "nominal_luminaire_count": 12,
+  "nominal_W": 204,
+  "model": "Two 102-W lumped end loads; balanced setting; L1-N/L2-N in load list",
+  "native_DU_cumulative_percent": [
+    0.596,
+    0.649
+  ],
+  "native_Ik1min_A": [
+    59.029,
+    54.374
+  ],
+  "unchanged_light_model": true,
+  "new_lighting_calculation": false,
+  "native_reports_pages": {
+    "01_Relux/Relux_V13_Final_FalseColours.pdf": 1,
+    "01_Relux/Relux_V13_Final_Gesamtbericht.pdf": 18,
+    "01_Relux/Relux_V13_Final_Tabellen_Isolux.pdf": 17,
+    "02_CAD/Bahnsteig_V13_Lageplan.pdf": 1,
+    "02_CAD/Bahnsteig_V13_Stromlaufplan.pdf": 1,
+    "02_CAD/Bahnsteig_V15_Stromlaufplan.pdf": 1,
+    "05_Grundlagen/Bahnsteig_V1.2_Relux_Report.pdf": 15,
+    "08_Webberechnung/ELEK_V15_Nativer_Kennlinienvergleich.pdf": 3,
+    "08_Webberechnung/ELEK_V15_Nativer_Netzbericht.pdf": 7,
+    "09_SIMARIS/SIMARIS_V16_Nativer_Berechnungsbericht.pdf": 12,
+    "09_SIMARIS/SIMARIS_V16_Native_Selektivitaet.pdf": 5,
+    "09_SIMARIS/SIMARIS_V16_Netzansichten_Lesefassung.pdf": 3,
+    "09_SIMARIS/Nativer_Export/Bahnsteig_V16_SIMARIS.pdf": 5,
+    "09_SIMARIS/Nativer_Export/Bahnsteig_V16_SIMARIS_operating_modes.pdf": 1
+  },
+  "checks_passed": [
+    "All V1.5 Relux, CAD, electrical baseline, original foundations and ELEK files byte-identical",
+    "12 unchanged luminaire coordinates; 204 W total and 102 W per A/B circuit",
+    "Native SDX/SX archive integrity passed; original DWG AC1015; DWG opened in BricsCAD V26",
+    "All delivered PDFs parsed; SIMARIS 12/5/5/1 native pages and 3 reading-view pages confirmed; pages rendered and visually inspected",
+    "Native UTF-16/TSV cable/fault tables checked; simple Ib<=In<=Iz and B upper magnetic 5In plausibility passed within the scenario",
+    "Native editable RTF headers valid; new textual artifacts checked for credential patterns (none found)"
+  ],
+  "essential_missing": [
+    "Reale Quelle und Anschlusskapazität",
+    "Verteiltes 12-Lasten-Netz und Unsymmetrie",
+    "Hersteller-Gesamtselektivität / I2t",
+    "LED-Einschaltstrom / RCD-Eignung",
+    "SPD / Bahn-PA / reale Erdung",
+    "Licht-Sollwerte / Blendung / Sicherheitslicht",
+    "Weitere Bahnhofslasten",
+    "Technische Gesamtplanung"
+  ],
+  "cost_new_service_EUR": 0,
+  "paid_plan_activated": false,
+  "verification_limits": [
+    "Confirmed native model outputs; no field measurement or construction approval",
+    "No manufacturer total selectivity approval; evaluation fields blank",
+    "Source rated 20 A versus automatic 25-A fuse unresolved",
+    "No distributed 12-load native model; no complete unsymmetrical/harmonic assessment",
+    "V1.5 historical CAD/XLSX not a V1.6 protection release",
+    "Native SDX integrity checked; application calculation and save observed; no fresh post-save SDX import claimed"
+  ]
+}

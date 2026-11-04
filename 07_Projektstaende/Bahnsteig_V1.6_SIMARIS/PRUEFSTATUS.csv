@@ -1,0 +1,20 @@
+﻿Pruefpunkt;Status;Beleg_oder_Luecke
+12 Leuchten / 204 W / Koordinaten;Verified;"Bytegleich zu V1.5; 12 Positionen und A/B je 102 W geprüft"
+Relux / Lageplan / Dach;Verified;"Originale V1.3-Ergebnisse erhalten; kein neuer Geometrieeingriff"
+SIMARIS 27.0.1 Netzlauf;Verified;"Native Dimensionierung; Messages [0]; SDX gespeichert"
+Native SIMARIS-Dokumente;Verified;"12 Seiten Bericht; 5 Seiten Kennlinien; 5 Netzansichten; native RTF/CSV/SX"
+SIMARIS CAD-Export;Verified;DWG der Kurzschlussansicht tatsächlich in BricsCAD V26 geöffnet
+SIMARIS Spannungsfall A/B;Verified;0.596 / 0.649 Prozent kumuliert im angenommenen Modell
+SIMARIS Endfehlerströme min A/B;Verified;"59.029 / 54.374 A; reale Netzdaten nicht bestätigt"
+Kabelauswahl Verlegeart C;Preliminary;"Cu/PVC70 Faktor1; Quelle4, Abgänge1.5, PE1.5; reale Verlegung fehlt"
+Geräte B1 / gG25 / RCD TypA;Preliminary;"Native Kandidaten; Inrush, Ableitstrom und Quellenkapazität offen"
+Abschaltung im Szenario;Verified;"Software bestätigt; keine reale Ausführungsfreigabe"
+Reale Quelle und Anschlusskapazität;Missing;"Ik1/Ik3 1.5..3kA angenommen; 20-A-Quelle versus gG25 abstimmen"
+Verteiltes 12-Lasten-Netz und Unsymmetrie;Missing;"Nur zwei Ersatzlasten gerechnet; balanced-Modus, Neutralleiter/Oberwellen offen"
+Hersteller-Gesamtselektivität / I2t;Missing;"Kennlinien vorhanden; Bewertungsfelder leer, kein bestätigter Grenzstrom"
+LED-Einschaltstrom / RCD-Eignung;Missing;Treiberdaten und gemeinsame Ableitströme fehlen
+SPD / Bahn-PA / reale Erdung;Missing;Kein vollständiges Konzept oder Geräteauswahl
+Synchronisierter CAD-Detailstromlaufplan;Preliminary;"Nativer V16-Netzplan aktuell; ältere B20/B6-Pläne nur Historie"
+Licht-Sollwerte / Blendung / Sicherheitslicht;Missing;Keine abschließende Anforderungsbewertung
+Weitere Bahnhofslasten;Missing;Anzeige, Beschallung und Zusatzverbraucher nicht bemessen
+Technische Gesamtplanung;Missing;Wesentliche reale Nachweise bleiben offen
