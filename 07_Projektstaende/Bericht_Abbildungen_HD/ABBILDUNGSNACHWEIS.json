@@ -1,0 +1,209 @@
+[
+  {
+    "file": "01_BricsCAD_Detailstromlaufplan_Vollbild.jpg",
+    "type": "Native Bildschirmaufnahme, 05.11.2026",
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "file": "02_BricsCAD_3D_Gesamtansicht.jpg",
+    "type": "Native Bildschirmaufnahme, 05.11.2026",
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "file": "03_BricsCAD_3D_Schattiert_Gesamt.jpg",
+    "type": "Native Bildschirmaufnahme, 05.11.2026",
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "file": "04_BricsCAD_Mitteldach_Detail.jpg",
+    "type": "Native Bildschirmaufnahme, 05.11.2026",
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "file": "05_BricsCAD_Lageplan_Vollbild.jpg",
+    "type": "Native Bildschirmaufnahme, 05.11.2026",
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "file": "06_BricsCAD_Lageplan_Dachbereich.jpg",
+    "type": "Native Bildschirmaufnahme, 05.11.2026",
+    "width": 1536,
+    "height": 864
+  },
+  {
+    "file": "07_Relux_Isolux_Vollbild.jpg",
+    "type": "Native Bildschirmaufnahme, 05.11.2026",
+    "width": 1536,
+    "height": 823
+  },
+  {
+    "file": "10_Stromlaufplan_Druckqualitaet_400dpi.png",
+    "type": "PDF-Rendering / vollstaendige Seite",
+    "source": "02_CAD/Bahnsteig_Mohamed_Saida_Detailstromlaufplan.pdf",
+    "page": 1,
+    "crop_normalized": null,
+    "width": 3306,
+    "height": 2328,
+    "source_sha256": "0233531e481a96c9698fc402264711bd43fcd6c86d151627e075e0c07c6bb1cd"
+  },
+  {
+    "file": "11_Stromlaufplan_Einspeisung_Detail.png",
+    "type": "PDF-Rendering / Ausschnitt",
+    "source": "02_CAD/Bahnsteig_Mohamed_Saida_Detailstromlaufplan.pdf",
+    "page": 1,
+    "crop_normalized": [
+      0.01,
+      0.01,
+      0.99,
+      0.25
+    ],
+    "width": 3240,
+    "height": 559,
+    "source_sha256": "0233531e481a96c9698fc402264711bd43fcd6c86d151627e075e0c07c6bb1cd"
+  },
+  {
+    "file": "12_Stromlaufplan_Kreis_A_Detail.png",
+    "type": "PDF-Rendering / Ausschnitt",
+    "source": "02_CAD/Bahnsteig_Mohamed_Saida_Detailstromlaufplan.pdf",
+    "page": 1,
+    "crop_normalized": [
+      0.01,
+      0.235,
+      0.99,
+      0.515
+    ],
+    "width": 3240,
+    "height": 652,
+    "source_sha256": "0233531e481a96c9698fc402264711bd43fcd6c86d151627e075e0c07c6bb1cd"
+  },
+  {
+    "file": "13_Stromlaufplan_Kreis_B_Detail.png",
+    "type": "PDF-Rendering / Ausschnitt",
+    "source": "02_CAD/Bahnsteig_Mohamed_Saida_Detailstromlaufplan.pdf",
+    "page": 1,
+    "crop_normalized": [
+      0.01,
+      0.52,
+      0.99,
+      0.795
+    ],
+    "width": 3240,
+    "height": 640,
+    "source_sha256": "0233531e481a96c9698fc402264711bd43fcd6c86d151627e075e0c07c6bb1cd"
+  },
+  {
+    "file": "14_Lageplan_Druckqualitaet_400dpi.png",
+    "type": "PDF-Rendering / vollstaendige Seite",
+    "source": "02_CAD/Bahnsteig_V13_Lageplan.pdf",
+    "page": 1,
+    "crop_normalized": null,
+    "width": 3306,
+    "height": 1778,
+    "source_sha256": "65bc1c9f3b68c4d28a3ab11bdb1703b3410bcba4d87cacd9199436865688775b"
+  },
+  {
+    "file": "15_Relux_Isolux_Originalseite_400dpi.png",
+    "type": "PDF-Rendering / vollstaendige Seite",
+    "source": "01_Relux/Relux_V13_Final_Tabellen_Isolux.pdf",
+    "page": 16,
+    "crop_normalized": null,
+    "width": 3400,
+    "height": 4400,
+    "source_sha256": "0f2ebd81a6db09a61f68a188b9c5c316f7ab890875d58cfefaff6f5e6dba57c8"
+  },
+  {
+    "file": "16_Relux_FalseColours_Originalseite_400dpi.png",
+    "type": "PDF-Rendering / vollstaendige Seite",
+    "source": "01_Relux/Relux_V13_Final_FalseColours.pdf",
+    "page": 1,
+    "crop_normalized": null,
+    "width": 3400,
+    "height": 4400,
+    "source_sha256": "10aab74c63daaeb369ef1e9a047c23244d42e6e8b6603c42fd9ec0807107d7cb"
+  },
+  {
+    "file": "17_Relux_Isolux_Planstreifen.png",
+    "type": "PDF-Rendering / Ausschnitt",
+    "source": "01_Relux/Relux_V13_Final_Tabellen_Isolux.pdf",
+    "page": 16,
+    "crop_normalized": [
+      0.065,
+      0.335,
+      0.87,
+      0.4
+    ],
+    "width": 2737,
+    "height": 286,
+    "source_sha256": "0f2ebd81a6db09a61f68a188b9c5c316f7ab890875d58cfefaff6f5e6dba57c8"
+  },
+  {
+    "file": "18_Relux_FalseColours_Planstreifen.png",
+    "type": "PDF-Rendering / Ausschnitt",
+    "source": "01_Relux/Relux_V13_Final_FalseColours.pdf",
+    "page": 1,
+    "crop_normalized": [
+      0.065,
+      0.335,
+      0.87,
+      0.4
+    ],
+    "width": 2737,
+    "height": 286,
+    "source_sha256": "10aab74c63daaeb369ef1e9a047c23244d42e6e8b6603c42fd9ec0807107d7cb"
+  },
+  {
+    "file": "19_Relux_FalseColours_Dachdetail.png",
+    "type": "PDF-Rendering / Ausschnitt",
+    "source": "01_Relux/Relux_V13_Final_FalseColours.pdf",
+    "page": 1,
+    "crop_normalized": [
+      0.373,
+      0.34,
+      0.575,
+      0.4
+    ],
+    "width": 687,
+    "height": 264,
+    "source_sha256": "10aab74c63daaeb369ef1e9a047c23244d42e6e8b6603c42fd9ec0807107d7cb"
+  },
+  {
+    "file": "20_Relux_Farbskala_und_Ergebnisse.png",
+    "type": "PDF-Rendering / Ausschnitt",
+    "source": "01_Relux/Relux_V13_Final_FalseColours.pdf",
+    "page": 1,
+    "crop_normalized": [
+      0.07,
+      0.59,
+      0.93,
+      0.78
+    ],
+    "width": 2924,
+    "height": 836,
+    "source_sha256": "10aab74c63daaeb369ef1e9a047c23244d42e6e8b6603c42fd9ec0807107d7cb"
+  },
+  {
+    "file": "21_Relux_Leuchtenliste_400dpi.png",
+    "type": "PDF-Rendering / vollstaendige Seite",
+    "source": "01_Relux/Relux_V13_Final_Tabellen_Isolux.pdf",
+    "page": 5,
+    "crop_normalized": null,
+    "width": 3400,
+    "height": 4400,
+    "source_sha256": "0f2ebd81a6db09a61f68a188b9c5c316f7ab890875d58cfefaff6f5e6dba57c8"
+  },
+  {
+    "file": "22_Relux_Ergebnistabelle_400dpi.png",
+    "type": "PDF-Rendering / vollstaendige Seite",
+    "source": "01_Relux/Relux_V13_Final_Tabellen_Isolux.pdf",
+    "page": 7,
+    "crop_normalized": null,
+    "width": 3400,
+    "height": 4400,
+    "source_sha256": "0f2ebd81a6db09a61f68a188b9c5c316f7ab890875d58cfefaff6f5e6dba57c8"
+  }
+]
