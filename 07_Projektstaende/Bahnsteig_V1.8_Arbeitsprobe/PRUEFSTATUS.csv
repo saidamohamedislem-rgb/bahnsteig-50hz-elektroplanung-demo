@@ -1,0 +1,16 @@
+﻿Pruefpunkt;Status;Beleg_oder_Luecke
+Lichtmodell / 12 Leuchten / 204 W;Verified;"RDF und Leuchtenliste unverändert; keine neue Geometrie"
+Native Relux-Ergebnisse;Verified;Originalbericht / Isolux / False Colours erhalten
+Native SIMARIS-Ergebnisse;Verified;"Vorhandener dimensionierter A/B-Lauf; frischer Export mit Mohamed Saida"
+Aktuelle Namensfelder SIMARIS;Verified;Neue 12- und 5-seitige PDFs, RTF, DWG, SX vom 05.11.2026
+CAD-Detailstromlaufplan;Verified;12 Leuchten / 24 Abschnitte, in BricsCAD gespeichert und PDF ausgegeben
+Abschnittsreferenz / Formeln;Verified;"V1.7-Mappe unverändert; unabhängige Wege- und Eingabetests protokolliert"
+Dreiseitiger Überblick / Nachweismappe;Verified;3 Seiten Überblick, 44 Seiten Nachweise mit Lesezeichen
+Szenario- und Kabelannahmen;Preliminary;"Fiktive TN-S-Quelle, C/Faktor1; kein realer Bestandsnachweis"
+Gerätekandidaten gG25 / B1 / RCD;Preliminary;Quellenbemessung 20A vs25A und LED-Inrush/RCD offen
+Herstellerselektivität / I2t;Missing;Kennlinien vorhanden, kein ausgefülltes Gesamturteil
+SPD / Bahn-PA / reale Erdung;Missing;Kein vollständiger Ausführungsnachweis
+Native 12-Lasten-SIMARIS-Modellierung;Missing;"Abschnittsreferenz separat; nativ weiterhin zwei Ersatzlasten"
+Reale Lichtanforderungen / Sicherheitslicht;Missing;Nicht abschließend bewertet
+Materialsammlung für späteren Bericht;Verified;BERICHT_GRUNDLAGE, Bilder, Tabellen und Quellen
+Technische Gesamtplanung / Ausführung;Missing;Arbeitsprobe ist keine Geräte-/Ausführungsfreigabe

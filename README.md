@@ -31,7 +31,13 @@ oder der Deutschen Bahn.
 
 ## Status
 
-## Aktueller Zwischenstand V1.7 - Mohamed Saida, 04.11.2026
+## Aktuelle Arbeitsprobe V1.8 - Mohamed Saida, 05.11.2026
+
+[Vorbereitete Vorstellungsmaterialien](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/README.md): dreiseitiger deutscher Überblick, 44-seitige Nachweismappe mit Lesezeichen, neuer BricsCAD-Detailstromlaufplan für 12 Leuchten / 24 Abschnitte und frische originale SIMARIS-Ausgaben unter Mohamed Saida. Lichtprojekt und Formelmappe bleiben unverändert. [Bericht-Grundlage](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/BERICHT_GRUNDLAGE.md) für den späteren Bericht.
+
+Fiktive Arbeitsprobe zum Erläutern der erlernten Planungsabläufe. Reale Messungen sind dafür nicht erforderlich; Geräte-/Selektivitäts-/Erdungsfreigabe wird nicht behauptet. Die technische Gesamtplanung ist nicht abgeschlossen. Keine Zusatzkosten.
+
+## Historischer Zwischenstand V1.7 - Mohamed Saida, 04.11.2026
 
 [V1.7 Detailplanung](07_Projektstaende/Bahnsteig_V1.7_Detailplanung/README.md): separat gespeichertes natives SIMARIS-Projekt mit Planner Mohamed Saida und neue Formelmappe für 12 Leuchten / 24 Leitungsabschnitte. Referenz-Spannungsfall maximal A 0,329376 %, B 0,387322 %. Abschnittsrechnung und Eingabeabhängigkeiten geprüft. Native V16-Originalberichte bleiben historisch erhalten; neue V17-Berichte/Schriftfelder und CAD-Detailplan sind noch ausstehend. Technische Gesamtplanung weiterhin unvollständig. [Fortsetzung ab diesem Stand](07_Projektstaende/Bahnsteig_V1.7_Detailplanung/FORTSETZUNG.md).
 

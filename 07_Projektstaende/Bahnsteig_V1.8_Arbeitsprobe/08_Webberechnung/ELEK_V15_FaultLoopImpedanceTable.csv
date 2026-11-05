@@ -1,0 +1,4 @@
+﻿Name;Active (mmÂ²);No. ccts;Neutral (mmÂ²);No. ccts;Earth (mmÂ²);No. ccts;Earth material;Length of run (m);Max. allowed Zs (Î©);External Zext (Î©);Internal Zint (Î©);Actual Zs (Î©);Touch voltage (V);Ief = Uo/Zs (A)
+UV-01 DEMO A-B;6;1;6;1;6;1;Cu;10;2.3094;0.0069 +0.0689 i;0.075 +0.0016 i;0.0819 +0.0705 i;80.14;2136.7
+A - 6 Leuchten 102W DEMO;1.5;1;1.5;1;4;1;Cu;109.7;7.6667;0.0819 +0.0705 i;2.2626 +0.0176 i;2.3445 +0.0881 i;60.5;98.03
+B - 6 Leuchten 102W DEMO;1.5;1;1.5;1;4;1;Cu;119.7;7.6667;0.0819 +0.0705 i;2.4688 +0.0192 i;2.5507 +0.0897 i;60.68;90.12

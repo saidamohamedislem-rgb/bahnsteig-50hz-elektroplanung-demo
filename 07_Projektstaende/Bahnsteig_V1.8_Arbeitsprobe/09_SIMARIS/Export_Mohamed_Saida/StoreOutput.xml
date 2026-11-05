@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data path="SN1.project" version="2.4" build="80">
+<item name="temp_data">
+<item name="output_data">
+<item name="files">
+<item name="selimages">
+<item name="node_0IK1MAX_PE_up0">
+<value type="7">C:\\Users\\mouha\\AppData\\Local\\Temp\\.sd\\1793899033259\\sel_node_0IK1MAX_PE_up.png</value>
+</item>
+<item name="node_0IK3MAX_up0">
+<value type="7">C:\\Users\\mouha\\AppData\\Local\\Temp\\.sd\\1793899033259\\sel_node_0IK3MAX_up.png</value>
+</item>
+<item name="node_1IK1MAX_PE_up0">
+<value type="7">C:\\Users\\mouha\\AppData\\Local\\Temp\\.sd\\1793899033259\\sel_node_1IK1MAX_PE_up.png</value>
+</item>
+<item name="node_1IK1MAX_N_up0">
+<value type="7">C:\\Users\\mouha\\AppData\\Local\\Temp\\.sd\\1793899033259\\sel_node_1IK1MAX_N_up.png</value>
+</item>
+<item name="node_2IK1MAX_N_up0">
+<value type="7">C:\\Users\\mouha\\AppData\\Local\\Temp\\.sd\\1793899033259\\sel_node_2IK1MAX_N_up.png</value>
+</item>
+<item name="node_0IK1MAX_N_up0">
+<value type="7">C:\\Users\\mouha\\AppData\\Local\\Temp\\.sd\\1793899033259\\sel_node_0IK1MAX_N_up.png</value>
+</item>
+<item name="node_count">
+<value type="5">3</value>
+</item>
+<item name="node_start_idx">
+<value type="5">0</value>
+</item>
+<item name="node_2IK1MAX_PE_up0">
+<value type="7">C:\\Users\\mouha\\AppData\\Local\\Temp\\.sd\\1793899033259\\sel_node_2IK1MAX_PE_up.png</value>
+</item>
+</item>
+<item name="outputdir">
+<value type="7">C:\\Users\\mouha\\AppData\\Local\\Temp\\.sd\\1793899033259\\</value>
+</item>
+<item name="openviewer">
+<value type="7">true</value>
+</item>
+</item>
+<item name="localisation">
+<item name="language">
+<item name="iso">
+<value type="7">en</value>
+</item>
+</item>
+<item name="decimal">
+<value type="7">,</value>
+</item>
+<item name="thousands">
+<value type="7">.</value>
+</item>
+<item name="date">
+<value type="7">5 Nov 2026</value>
+</item>
+</item>
+<item name="node_count">
+<value type="5">3</value>
+</item>
+<item name="settings">
+<item name="logo">
+<value type="7">C:\\Users\\mouha\\AppData\\Local\\Programs\\SIMARIS design 27\\plugins\\com.siemens.simaris.design.resources_2.5.1\\Projects\\Output\\siemens_logo.png</value>
+</item>
+<item name="paper">
+<value type="7">a4</value>
+</item>
+</item>
+<item name="distrib_lv_count">
+<value type="5">1</value>
+</item>
+<item name="distrib_mv_count">
+<value type="5">0</value>
+</item>
+</item>
+</item>
+<item name="public_data">
+<item name="partproject_0">
+<item name="node_2">
+<item name="up">
+<item name="NAME">
+<value type="7">B - 6 Leuchten - 102W</value>
+</item>
+</item>
+<item name="NAME">
+<value type="7">B - 6 Leuchten - 102W</value>
+</item>
+<item name="ID_RefSchalterObenNS">
+<item name="ii">
+<item name="disengaged">
+<value type="7">false</value>
+</item>
+<item name="switchable">
+<value type="7">false</value>
+</item>
+<item name="value_with_factor">
+<value type="6">3</value>
+</item>
+<item name="adjustable">
+<value type="7">false</value>
+</item>
+<item name="locked">
+<value type="7">false</value>
+</item>
+<item name="locked_slider">
+<value type="7">false</value>
+</item>
+<item name="locked_group">
+<value type="7">false</value>
+</item>
+<item name="eSET">
+<value type="7">false</value>
+</item>
+<item name="factor">
+<value type="6">nan</value>
+</item>
+<item name="factor_relation">
+<value type="7"></value>
+</item>
+<item name="disengageable">
+<value type="7">false</value>
+</item>
+<item name="value">
+<value type="6">3</value>
+</item>
+</item>
+<item name="ir">
+<item name="disengaged">
+<value type="7">false</value>
+</item>
+<item name="switchable">
+<value type="7">false</value>
+</item>
+<item name="value_with_factor">
+<value type="6">1</value>
+</item>
+<item name="adjustable">
+<value type="7">false</value>
+</item>
+<item name="locked">
+<value type="7">false</value>
+</item>
+<item name="locked_slider">
+<value type="7">false</value>
+</item>
+<item name="locked_group">
+<value type="7">false</value>
+</item>
+<item name="eSET">
+<value type="7">false</value>
+</item>
+<item name="factor">
+<value type="6">nan</value>
+</item>
+<item name="factor_relation">
+<value type="7"></value>
+</item>
+<item name="disengageable">
+<value type="7">false</value>
+</item>
+<item name="value">
+<value type="6">1</value>
+</item>
+</item>
+<item name="product">
+<item name="AAMZ00000000">
+<value type="6">1</value>
+</item>
+<item name="mlfb">
+<value type="7">5SY41016</value>
+</item>
+</item>
+<item name="icu_icn">
+<value type="6">10</value>
+</item>
+<item name="ID_Switch_iMultiply">
+<value type="5">1</value>
+</item>
+<item name="second">
+<value type="7">s</value>
+</item>
+<item name="NAME">
+<value type="7">CB 1.3a</value>
+</item>
+<item name="ampere">
+<value type="7">A</value>
+</item>
+<item name="sel_state1">
+<value type="7"></value>
+</item>
+<item name="sel_state0">
+<value type="7"></value>
+</item>
+<item name="sel_state2">
+<value type="7"></value>
+</item>
+<item name="switch_type">
+<value type="7">mcbfi</value>
+</item>
+</item>
+<item name="sel_active">
+<value type="5">1</value>
+</item>
+</item>
+<item name="node_0">
+<item name="up">
+<item name="NAME">
+<value type="7">LVMD 1.1</value>
+</item>
+</item>
+<item name="NAME">
+<value type="7">LVMD 1.1</value>
+</item>
+<item name="ID_RefSchalterObenNS">
+<item name="number_of_fuses">
+<value type="5">3</value>
+</item>
+<item name="product">
+<item name="AAMZ00000000">
+<value type="6">25</value>
+</item>
+<item name="mlfb">
+<value type="7">3NA3810</value>
+</item>
+</item>
+<item name="ID_Switch_iMultiply">
+<value type="5">1</value>
+</item>
+<item name="second">
+<value type="7">s</value>
+</item>
+<item name="NAME">
+<value type="7">FSO 1.1a</value>
+</item>
+<item name="ampere">
+<value type="7">A</value>
+</item>
+<item name="sel_state1">
+<value type="7"></value>
+</item>
+<item name="sel_state0">
+<value type="7"></value>
+</item>
+<item name="sel_state2">
+<value type="7"></value>
+</item>
+<item name="switch_type">
+<value type="7">siso</value>
+</item>
+<item name="product_fuse">
+<item name="AAMZ00000000">
+<value type="6">25</value>
+</item>
+<item name="mlfb">
+<value type="7">3NA3810</value>
+</item>
+</item>
+</item>
+<item name="sel_active">
+<value type="5">1</value>
+</item>
+</item>
+<item name="node_1">
+<item name="up">
+<item name="NAME">
+<value type="7">A - 6 Leuchten - 102W</value>
+</item>
+</item>
+<item name="NAME">
+<value type="7">A - 6 Leuchten - 102W</value>
+</item>
+<item name="ID_RefSchalterObenNS">
+<item name="ii">
+<item name="disengaged">
+<value type="7">false</value>
+</item>
+<item name="switchable">
+<value type="7">false</value>
+</item>
+<item name="value_with_factor">
+<value type="6">3</value>
+</item>
+<item name="adjustable">
+<value type="7">false</value>
+</item>
+<item name="locked">
+<value type="7">false</value>
+</item>
+<item name="locked_slider">
+<value type="7">false</value>
+</item>
+<item name="locked_group">
+<value type="7">false</value>
+</item>
+<item name="eSET">
+<value type="7">false</value>
+</item>
+<item name="factor">
+<value type="6">nan</value>
+</item>
+<item name="factor_relation">
+<value type="7"></value>
+</item>
+<item name="disengageable">
+<value type="7">false</value>
+</item>
+<item name="value">
+<value type="6">3</value>
+</item>
+</item>
+<item name="ir">
+<item name="disengaged">
+<value type="7">false</value>
+</item>
+<item name="switchable">
+<value type="7">false</value>
+</item>
+<item name="value_with_factor">
+<value type="6">1</value>
+</item>
+<item name="adjustable">
+<value type="7">false</value>
+</item>
+<item name="locked">
+<value type="7">false</value>
+</item>
+<item name="locked_slider">
+<value type="7">false</value>
+</item>
+<item name="locked_group">
+<value type="7">false</value>
+</item>
+<item name="eSET">
+<value type="7">false</value>
+</item>
+<item name="factor">
+<value type="6">nan</value>
+</item>
+<item name="factor_relation">
+<value type="7"></value>
+</item>
+<item name="disengageable">
+<value type="7">false</value>
+</item>
+<item name="value">
+<value type="6">1</value>
+</item>
+</item>
+<item name="product">
+<item name="AAMZ00000000">
+<value type="6">1</value>
+</item>
+<item name="mlfb">
+<value type="7">5SY41016</value>
+</item>
+</item>
+<item name="icu_icn">
+<value type="6">10</value>
+</item>
+<item name="ID_Switch_iMultiply">
+<value type="5">1</value>
+</item>
+<item name="second">
+<value type="7">s</value>
+</item>
+<item name="NAME">
+<value type="7">CB 1.2a</value>
+</item>
+<item name="ampere">
+<value type="7">A</value>
+</item>
+<item name="sel_state1">
+<value type="7"></value>
+</item>
+<item name="sel_state0">
+<value type="7"></value>
+</item>
+<item name="sel_state2">
+<value type="7"></value>
+</item>
+<item name="switch_type">
+<value type="7">mcbfi</value>
+</item>
+</item>
+<item name="sel_active">
+<value type="5">1</value>
+</item>
+</item>
+<item name="distrib_lv_0">
+<item name="NAME">
+<value type="7">LVMD 1</value>
+</item>
+<item name="ID_ZielVerGleichZeitigkeitsFaktor">
+<value type="6">1</value>
+</item>
+<item name="phases">
+<value type="7">L1-L2-L3-N</value>
+</item>
+</item>
+</item>
+<item name="header">
+<item name="on">
+<value type="7">On</value>
+</item>
+<item name="project_changed_at">
+<value type="7">Wednesday, 4 November 2026</value>
+</item>
+<item name="main_opmode_name">
+<value type="7">Operating mode 1</value>
+</item>
+<item name="project_short_name">
+<value type="7">DEMO A-B Beleuchtung 204 W - Vorplanung</value>
+</item>
+<item name="main_opmode_label">
+<value type="7">Main operating mode</value>
+</item>
+<item name="project_version_date">
+<value type="7">2026-11-02</value>
+</item>
+<item name="extended_limits">
+<value type="7">false</value>
+</item>
+<item name="project_comment">
+<value type="7">Fiktive Arbeitsprobe - Vorplanung. 12 Leuchten, nominal 204 W; A/B je 102 W als Ersatzlasten. TN-S und Ik 1,5..3 kA sind Annahmen. Keine Ausfuehrungsfreigabe; LED-Inrush, reale Netz-/Verlegedaten, Selektivitaet, SPD und Bahn-PA offen.</value>
+</item>
+<item name="project_city">
+<value type="7"></value>
+</item>
+<item name="project_customer">
+<value type="7"></value>
+</item>
+<item name="project_created_at">
+<value type="7">Wednesday, 4 November 2026</value>
+</item>
+<item name="project_name">
+<value type="7">Bahnsteig V1.7 - Mohamed Saida</value>
+</item>
+<item name="with_mv">
+<value type="7">false</value>
+</item>
+<item name="project_created_with">
+<value type="7">Created with SIMARIS design</value>
+</item>
+<item name="project_planning_office">
+<value type="7"></value>
+</item>
+<item name="project_filename">
+<value type="7">Bahnsteig_V17_Mohamed_Saida.sdx</value>
+</item>
+<item name="project_year">
+<value type="5">2026</value>
+</item>
+<item name="off">
+<value type="7">Off</value>
+</item>
+<item name="project_version_build">
+<value type="7">2267</value>
+</item>
+<item name="project_version_complete">
+<value type="7">27.0.1 (2267)</value>
+</item>
+<item name="project_version_software">
+<value type="7">SIMARIS design</value>
+</item>
+<item name="project_editor">
+<value type="7">Mohamed Saida</value>
+</item>
+<item name="project_version_majorminor">
+<value type="7">27.0.1</value>
+</item>
+</item>
+</item>
+</data>

@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-05",
+  "version": "V1.8 Arbeitsprobe",
+  "author": "Mohamed Saida",
+  "portfolio_material_prepared": true,
+  "engineering_complete": false,
+  "execution_release": false,
+  "new_lighting_calculation": false,
+  "new_electrical_dimensioning": false,
+  "native_source_model": "V1.7, electrical calculations retained from V1.6; metadata and exports current",
+  "native_new_reports_pages": [
+    12,
+    5,
+    5
+  ],
+  "overview_pages": 3,
+  "evidence_packet_pages": 44,
+  "checks_passed": [
+    "Relux, original foundations and V1.7 formula workbook byte-preserved",
+    "Native BricsCAD DWG AC1032, 12 luminaire labels and 24 route IDs match schedule",
+    "New named native reports 12+5 pages and SDX/SX integrity confirmed; summary/packet 3/44 pages",
+    "Summary key values checked against existing model evidence; no unwanted authorship labels in current reader documents",
+    "All new overview pages, CAD plot and 17 native report pages rendered and visually reviewed",
+    "All six PDF bookmark destinations verified: pages 1,4,5,17,22,27"
+  ],
+  "further_engineering": [
+    "Herstellerselektivität / I2t",
+    "SPD / Bahn-PA / reale Erdung",
+    "Native 12-Lasten-SIMARIS-Modellierung",
+    "Reale Lichtanforderungen / Sicherheitslicht",
+    "Technische Gesamtplanung / Ausführung"
+  ],
+  "cost_new_EUR": 0,
+  "paid_plan_activated": false,
+  "skills_used": [
+    "computer-use",
+    "pdf",
+    "verified-improvement"
+  ],
+  "writing": "Neutral professional German; no connected style references available"
+}

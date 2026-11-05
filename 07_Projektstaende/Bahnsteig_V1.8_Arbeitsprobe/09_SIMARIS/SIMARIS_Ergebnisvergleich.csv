@@ -1,0 +1,13 @@
+﻿Groesse;Einheit;Zuleitung_UV;A;B;Status_Quelle
+Laenge;m;10;109.7;119.7;Native Eingabe
+Nennlast;W;;102;102;Native Lasten / Leuchtenliste
+Ib;A;0.465;0.465;0.465;Nativer Bericht
+Iz_Kabel;A;32;19.5;19.5;Native Szenarioausgabe
+Querschnitt_L_N_PE;mm2;4/4/4 (3 L);1.5/1.5/1.5;1.5/1.5/1.5;Native Ausgabe
+DeltaU_Abschnitt;Prozent;0.01;0.586;0.639;Nativer Bericht S6
+DeltaU_kumuliert;Prozent;0.01;0.596;0.649;Nativer Bericht S6
+Ik1_min_L_PE_L_N;A;889.774;59.029;54.374;Native Kurzschluss CSV
+Ik1_max_L_PE_L_N;A;1547.839;89.23;82.146;Native Kurzschluss CSV
+Ik3_max;A;2078.845;n/a;n/a;Native Kurzschluss CSV
+Ik3_min;A;1132.441;n/a;n/a;Native Kurzschluss CSV
+Schutz;;gG25;B1 + RCD A 25A 30mA;B1 + RCD A 25A 30mA;Preliminary Gerätefreigabe

@@ -1,0 +1,25 @@
+﻿ID;From;To;Type;Circuit;Length_m;Downstream_W;Status;Cable_type;Section_mm2;Phase
+A_TR1;UV01;A_T1;Trunk;A;4.1;102.0;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+A_AB1;A_T1;L01;Branch;A;5.6;18.5;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+A_TR2;A_T1;A_T2;Trunk;A;20.0;83.5;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+A_AB2;A_T2;L03;Branch;A;5.6;18.5;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+A_TR3;A_T2;A_T3;Trunk;A;20.0;65.0;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+A_AB3;A_T3;L05;Branch;A;5.4;14.0;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+A_TR4;A_T3;A_T4;Trunk;A;20.0;51.0;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+A_AB4;A_T4;L07;Branch;A;5.4;14.0;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+A_TR5;A_T4;A_T5;Trunk;A;20.0;37.0;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+A_AB5;A_T5;L09;Branch;A;5.6;18.5;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+A_TR6;A_T5;A_T6;Trunk;A;20.0;18.5;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+A_AB6;A_T6;L11;Branch;A;5.6;18.5;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+B_TR1;UV01;B_T1;Trunk;B;14.1;102.0;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+B_AB1;B_T1;L02;Branch;B;5.6;18.5;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+B_TR2;B_T1;B_T2;Trunk;B;20.0;83.5;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+B_AB2;B_T2;L04;Branch;B;5.6;18.5;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+B_TR3;B_T2;B_T3;Trunk;B;20.0;65.0;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+B_AB3;B_T3;L06;Branch;B;5.4;14.0;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+B_TR4;B_T3;B_T4;Trunk;B;20.0;51.0;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+B_AB4;B_T4;L08;Branch;B;5.4;14.0;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+B_TR5;B_T4;B_T5;Trunk;B;20.0;37.0;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+B_AB5;B_T5;L10;Branch;B;5.6;18.5;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
+B_TR6;B_T5;B_T6;Trunk;B;20.0;18.5;Preliminary: schematischer CAD-Weg;Missing;Missing;Missing
+B_AB6;B_T6;L12;Branch;B;5.6;18.5;Preliminary: Querweg plus Montagehoehe;Missing;Missing;Missing
