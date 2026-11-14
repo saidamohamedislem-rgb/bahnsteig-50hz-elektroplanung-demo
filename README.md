@@ -16,6 +16,7 @@ Fiktive Modernisierung der **Allgemeinbeleuchtung eines 120 m × 4 m großen Bah
 |---|---|
 | **[Kurzüberblick – 3 Seiten (PDF)](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/00_Vorstellung/01_Arbeitsprobe_Mohamed_Saida_Kurzueberblick.pdf)** | Aufgabe, Vorgehensweise und wichtigste Ergebnisse in kompakter Form |
 | **[Technischer Projektbericht – GitHub-Lesefassung](docs/TECHNISCHER_PROJEKTBERICHT_LESFASSUNG.md)** | Technische Schritte, Bilder, Vergleich der Berechnungsmodelle und offene Nachweise |
+| **[Vollständiger Bericht – Textfassung aller 64 PDF-Seiten](docs/VOLLSTAENDIGER_BERICHT_64_SEITEN_TEXTFASSUNG.md)** | Vollständiger auslesbarer Berichtstext, seitenweise übernommen; für Layout und Abbildungen bitte die originalen Nachweis-PDFs öffnen |
 | **[Nachweismappe – 44 Seiten (PDF)](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/00_Vorstellung/00_Nachweismappe_Mohamed_Saida.pdf)** | Zusammenstellung der originalen CAD-, SIMARIS- und Relux-Ausgaben mit Lesezeichen |
 | **[HD-Abbildungen für den Bericht](07_Projektstaende/Bericht_Abbildungen_HD/README.md)** | Originale BricsCAD-Ansichten und PDF-basierte Darstellungen in hoher Auflösung, mit Herkunft und Seitenzuordnung |
 
@@ -79,6 +80,7 @@ Für eine reale Ausführung wären u. a. noch Netzdaten und tatsächliche Verleg
 - **[Original-Screenshots und Bildverzeichnis](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/04_Screenshots/VERZEICHNIS.md)** – Softwareansichten und Tabellen.
 - **[HD-Bildstrecke](07_Projektstaende/Bericht_Abbildungen_HD/README.md)** – Abbildungen, Auflösung und originale PDF-Quellen.
 - **[Technischer Bericht als GitHub-Lesefassung](docs/TECHNISCHER_PROJEKTBERICHT_LESFASSUNG.md)** – zusammenhängende Erklärung mit ausgewählten Bildern.
+- **[Vollständiger Bericht – 64 PDF-Seiten als Textfassung](docs/VOLLSTAENDIGER_BERICHT_64_SEITEN_TEXTFASSUNG.md)** – durchsuchbarer Seiteninhalt des separat vorhandenen Berichts; das gestaltete Original-PDF ist noch nicht im Repository.
 - **[Bisheriger README-Stand (Archiv)](docs/README_ARCHIV_BIS_2026-11-14.md)** – ursprüngliche Dokumentation und historische Versionshinweise.
 
 ---
