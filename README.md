@@ -1,79 +1,88 @@
-# Elektroplanung 50 Hz - Bahnsteigmodernisierung
+# Elektroplanung eines Bahnsteigs bei 50 Hz
 
-## Portfolio-Demoprojekt
+### BricsCAD · ReluxDesktop · SIMARIS design · Excel
 
-Fiktive Modernisierung der elektrischen
-Energieversorgung eines Bahnsteigs.
+**Mohamed Saida | Technische Arbeitsprobe / Portfolio-Projekt | V1.8**
 
-Das Projekt dient als Arbeitsprobe fuer eine
-Bewerbung im Bereich Eisenbahninfrastruktur,
-insbesondere bei GFK Ingenieure.
+Fiktive Modernisierung der **Allgemeinbeleuchtung eines 120 m × 4 m großen Bahnsteigs**: von der CAD-Koordination über die Lichtsimulation bis zur elektrischen Vorplanung und einer eigenen abschnittsweisen Spannungsfallberechnung.
 
-Kein offizielles Projekt der GFK Ingenieure
-oder der Deutschen Bahn.
+![BricsCAD 3D-Ansicht des Bahnsteigs](07_Projektstaende/Bericht_Abbildungen_HD/02_BricsCAD_3D_Gesamtansicht.jpg)
 
-## Software
+*BricsCAD V26 – koordinierte 3D-Gesamtansicht. Originalansicht aus dem Projekt; keine KI-generierte Visualisierung.*
 
-- BricsCAD V26: Technische Zeichnungen
-- SIMARIS Suite: vorgesehen für die weitere Netzberechnung
-- ReluxDesktop: Beleuchtungsplanung
-- GitHub: Dokumentation und Versionskontrolle
+## Einstieg für die fachliche Durchsicht
 
-## Projektphasen
+| Dokument | Inhalt |
+|---|---|
+| **[Kurzüberblick – 3 Seiten (PDF)](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/00_Vorstellung/01_Arbeitsprobe_Mohamed_Saida_Kurzueberblick.pdf)** | Aufgabe, Vorgehensweise und wichtigste Ergebnisse in kompakter Form |
+| **[Technischer Projektbericht – GitHub-Lesefassung](docs/TECHNISCHER_PROJEKTBERICHT_LESFASSUNG.md)** | Technische Schritte, Bilder, Vergleich der Berechnungsmodelle und offene Nachweise |
+| **[Nachweismappe – 44 Seiten (PDF)](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/00_Vorstellung/00_Nachweismappe_Mohamed_Saida.pdf)** | Zusammenstellung der originalen CAD-, SIMARIS- und Relux-Ausgaben mit Lesezeichen |
+| **[HD-Abbildungen für den Bericht](07_Projektstaende/Bericht_Abbildungen_HD/README.md)** | Originale BricsCAD-Ansichten und PDF-basierte Darstellungen in hoher Auflösung, mit Herkunft und Seitenzuordnung |
 
-1. Grundlagenermittlung
-2. Bestands- und Entwurfsplanung
-3. Lageplan und Kabeltrassen
-4. Stromlaufplan und Verteilungsstruktur
-5. Kabel- und Schutzberechnungen
-6. Beleuchtungsplanung und Simulation
-7. Technischer Abschlussbericht
+> **Einordnung:** Eigenständiges Demonstrations- und Lernprojekt, kein offizielles Projekt der Deutschen Bahn oder von GFK Ingenieure. Die vorhandenen Ergebnisse sind eine fachlich dokumentierte **Vorplanung**, keine prüffähige oder freigegebene Ausführungsplanung.
 
-## Status
+## Projekt auf einen Blick
 
-## Aktuelle Arbeitsprobe V1.8 - Mohamed Saida, 05.11.2026
+| Parameter | Dokumentierter Stand |
+|---|---|
+| Geometrie | 120 m Bahnsteiglänge × 4 m Breite; 30 m mittige Überdachung |
+| Beleuchtung | 12 Leuchten: 8 × 18,5 W + 4 × 14 W = **204 W** |
+| Aufteilung | **Stromkreis A: 102 W** / **Stromkreis B: 102 W**, alternierende Leuchtenzuordnung |
+| Relux-Simulation | **Em 18,1 lx**, Emin 7,96 lx, Emax 37 lx, U0 **0,44** |
+| Elektrische Netzannahme | 400/230 V, 50 Hz, TN-S; zwei in SIMARIS modellierte Ersatzlasten |
+| Spannungsfall SIMARIS | **A 0,596 % / B 0,649 %** – konzentrierte Endlasten |
+| Eigene Abschnittsrechnung | **A 0,329376 % / B 0,387322 %** – zwölf verteilte Leuchten, 24 Leitungsabschnitte |
 
-[Vorbereitete Vorstellungsmaterialien](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/README.md): dreiseitiger deutscher Überblick, 44-seitige Nachweismappe mit Lesezeichen, neuer BricsCAD-Detailstromlaufplan für 12 Leuchten / 24 Abschnitte und frische originale SIMARIS-Ausgaben unter Mohamed Saida. Lichtprojekt und Formelmappe bleiben unverändert. [Bericht-Grundlage](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/BERICHT_GRUNDLAGE.md) für den späteren Bericht.
+**Wichtig zum Vergleich:** SIMARIS und die Excel-Referenz verwenden unterschiedliche Lastverteilungen und zum Teil andere Rechenannahmen. Die Werte sind **nicht** zwei identische Netzmodelle.
 
-Fiktive Arbeitsprobe zum Erläutern der erlernten Planungsabläufe. Reale Messungen sind dafür nicht erforderlich; Geräte-/Selektivitäts-/Erdungsfreigabe wird nicht behauptet. Die technische Gesamtplanung ist nicht abgeschlossen. Keine Zusatzkosten.
+## Einblicke in die Projektarbeit
 
-## Historischer Zwischenstand V1.7 - Mohamed Saida, 04.11.2026
+| CAD-Lageplan | Beleuchtungssimulation |
+|:--:|:--:|
+| ![Lageplan mit Leuchten und Dach](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/04_Screenshots/02_BricsCAD_Lageplan.jpg) | ![Relux-Falschfarbenansicht](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/04_Screenshots/04_Relux_FalseColours_Stand.jpg) |
+| **BricsCAD:** Leuchtenpositionen, Dachbereich und schematische Wege | **Relux:** berechnete Lichtverteilung der Allgemeinbeleuchtung |
 
-[V1.7 Detailplanung](07_Projektstaende/Bahnsteig_V1.7_Detailplanung/README.md): separat gespeichertes natives SIMARIS-Projekt mit Planner Mohamed Saida und neue Formelmappe für 12 Leuchten / 24 Leitungsabschnitte. Referenz-Spannungsfall maximal A 0,329376 %, B 0,387322 %. Abschnittsrechnung und Eingabeabhängigkeiten geprüft. Native V16-Originalberichte bleiben historisch erhalten; neue V17-Berichte/Schriftfelder und CAD-Detailplan sind noch ausstehend. Technische Gesamtplanung weiterhin unvollständig. [Fortsetzung ab diesem Stand](07_Projektstaende/Bahnsteig_V1.7_Detailplanung/FORTSETZUNG.md).
+| Elektrischer Detailstromlaufplan | SIMARIS-Netzmodell |
+|:--:|:--:|
+| ![Detailstromlaufplan A und B](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/04_Screenshots/17_V18_Detailstromlaufplan_PDF.png) | ![SIMARIS-Netzmodell](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/04_Screenshots/11_BricsCAD_SIMARIS_Netzplan.png) |
+| **BricsCAD:** zwölf Leuchten, A/B-Stromkreise und 24 Stamm-/Stich-IDs | **SIMARIS:** Netzstruktur, Lastannahmen und Berechnungsausgaben |
 
-## Historischer Arbeitsstand V1.6 - native SIMARIS-Rechnung, 04.11.2026
+Die vollständigen Planseiten sind zusätzlich als **[hochauflösende Abbildungen](07_Projektstaende/Bericht_Abbildungen_HD/README.md)** und in den **[Original-PDFs](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/00_Vorstellung/README.md)** abgelegt.
 
-Die [V1.6-Lieferung](07_Projektstaende/Bahnsteig_V1.6_SIMARIS/README.md) ergänzt das erhaltene Licht-/CAD-Projekt um einen tatsächlich dimensionierten SIMARIS-design-27.0.1-Entwurf. Enthalten sind SDX/SX, nativer DWG-Export, echte RTF/CSV, 12-seitige Dokumentation, fünfseitige Kennlinien und Netzansichten sowie eine dreiseitige Lesefassung. Zwei Ersatzlasten A/B je 102 W; kumulierter Spannungsfall 0,596 / 0,649 %, minimale Endfehlerströme 59,029 / 54,374 A. Messages [0].
+## So bin ich vorgegangen
 
-Die zwölf Relux-Leuchten und alle bisherigen Originalstände bleiben unverändert. Automatisch gewählte gG25/B1/RCD-Geräte sind vorläufig; reale Netzdaten, Quellenkapazität, LED-Inrush, Selektivität, SPD/Bahn-PA und ein verteiltes Detailnetz fehlen. Die technische Gesamtplanung ist nicht abgeschlossen. Kein kostenpflichtiger Plan aktiviert. [Gesprächsleitfaden](07_Projektstaende/Bahnsteig_V1.6_SIMARIS/VORSTELLUNGSGESPRAECH.md) und [Fortsetzung](07_Projektstaende/Bahnsteig_V1.6_SIMARIS/FORTSETZUNG.md). Nachfolgende Versionen sind Historie.
+**01 — Grundlagen und Modell prüfen.** Vorhandene Relux-/CAD-Dateien gesichert, Geometrie und Leuchtenpositionen abgeglichen; daraus einen nachvollziehbaren Arbeitsstand entwickelt.
 
-## Historischer Arbeitsstand V1.5 - natives Free-Netzmodell, 04.11.2026
+**02 — BricsCAD-Zeichnungen koordinieren.** Lageplan und 3D-Geometrie mit mittiger Überdachung betrachtet, Dachstützen/Träger ergänzt bzw. koordiniert und technische Zeichnungen abgeleitet. [Lageplan als PDF](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/02_CAD/Bahnsteig_V13_Lageplan.pdf)
 
-Die [V1.5-Lieferung](07_Projektstaende/Bahnsteig_V1.5_Free_Netzmodell/README.md) enthaelt das tatsaechlich berechnete ELEK-Free-A/B-Netz, native Vorschau-PDFs (7 + 3 Seiten), einen neuen BricsCAD-Stromlaufplan DWG/DXF/PDF, eine Formel-XLSX und aktualisierte Bericht-Grundlagen. Die zwoelf Relux-Leuchten und V1.2-/V1.3-Originalstaende bleiben unveraendert.
+**03 — Beleuchtung mit Relux auswerten.** Zwölf vorhandene Leuchten im koordinierten Modell beibehalten, nach Geometrieergänzung neu gerechnet und Isolux-/Falschfarbenbilder sowie den Originalbericht ausgewertet. [Relux-Originalbericht (PDF)](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/00_Vorstellung/06_Relux_Originalbericht.pdf)
 
-Kumulierter Szenario-Spannungsfall A/B: 0,652 / 0,710 Prozent. Reale Netzdaten, abschliessende Kabel-/Schutzfreigabe, Selektivitaet, SPD/Bahn-PA und Lichtanforderungsbewertung fehlen weiterhin. Kein bezahlter Plan aktiviert. [Professional-Nutzen fuer die Fortsetzung und das Vorstellungsgespraech](07_Projektstaende/Bahnsteig_V1.5_Free_Netzmodell/PROFESSIONAL_NUTZEN.md). Aktueller Fortsetzungsstand ist V1.5; nachfolgende V1.4-/V1.3-Abschnitte bleiben Historie.
+**04 — Stromkreise A/B detaillieren.** Alternierende Leuchtenzuordnung und Stamm-/Stich-Abschnitte in einen lesbaren Detailstromlaufplan überführt. [Detailstromlaufplan (PDF)](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/00_Vorstellung/02_Detailstromlaufplan.pdf)
 
+**05 — Elektrische Vorplanung in SIMARIS.** TN-S-Beispielnetz mit Unterverteilung, Zuleitung und zwei gebündelten 102-W-Endlasten modelliert; native Berechnungsberichte, Kurzschlussdaten und Schutzkennlinien dokumentiert. [SIMARIS-Berechnungsbericht (PDF)](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/00_Vorstellung/03_SIMARIS_Berechnung.pdf)
 
-## Fortsetzung V1.4 - Web-Netzschaltplan vorbereiten
+**06 — Verteilte Lasten selbst rechnen.** Für zwölf Leuchten die Strom- und Spannungsfallwerte entlang von 24 Leitungsabschnitten in einer bearbeitbaren Excel-Formelmappe berechnet und die Modellunterschiede erläutert. [Excel-Rechnung](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/03_Elektro/Bahnsteig_V17_Leitungsberechnung.xlsx)
 
-Neue [V1.4-Eingabebasis](07_Projektstaende/Bahnsteig_V1.4_Arbeitsstand/08_Webberechnung/WEB_ALTERNATIVE.md): 12 Lasten und 24 schematische Leitungsabschnitte für einen Web-Netzschaltplan. ELEK Cable Pro Web Professional-Test als nächste Option ausgewählt; Registrierung übernimmt der Benutzer. Noch kein neuer Netz-Rechenlauf. Die nachfolgenden V1.3-Lichtwerte bleiben unverändert.
+**07 — Nachweise strukturiert dokumentieren.** Originalausgaben, bearbeitbare Dateien, Versionsstände, Bildquellen und einen Prüfstatus getrennt aufbewahrt. [Prüfstatus](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/PRUEFSTATUS.csv)
 
-## Historischer Arbeitsstand – V1.3, 04.11.2026
+## Technische Erkenntnisse und offene Nachweise
 
-Die historische V1.3-Sicherung liegt unter [07_Projektstaende/Bahnsteig_V1.3_Final](07_Projektstaende/Bahnsteig_V1.3_Final/README.md).
-Zum Fortsetzen zuerst [FORTSETZUNG.md](07_Projektstaende/Bahnsteig_V1.3_Final/FORTSETZUNG.md) lesen.
-Bearbeitbare Relux-/DWG-/DXF-/XLSX-Dateien, native PDF-Berichte, Screenshots und V1.2-Sicherungen sind enthalten.
+Der Schwerpunkt der Arbeitsprobe liegt darauf, **Zusammenhänge zwischen CAD, Lichtberechnung, Netzberechnung und elektrischen Details nachvollziehbar zu machen** und Rechenergebnisse kritisch einzuordnen.
 
-12 bestehende Leuchten wurden beibehalten, nominal 204 W. Relux wurde nach Ergänzung der Dachstützen neu berechnet:
-Em 18,1 lx, Emin 7,96 lx, Emax 37 lx, U0 0,44. [Prüfstatus](07_Projektstaende/Bahnsteig_V1.3_Final/PRUEFSTATUS.csv).
+Für eine reale Ausführung wären u. a. noch Netzdaten und tatsächliche Verlegebedingungen, die Schutzgerätekoordination und vollständige Selektivität, LED-Einschaltströme, SPD, Bahnpotenzialausgleich sowie projektbezogene Beleuchtungsanforderungen und Sicherheitsbeleuchtung zu prüfen. Auch die dokumentierte 20-A-Quellenbemessung gegenüber gG25 erfordert eine gesonderte Bewertung.
 
-**Technische Planung noch nicht abgeschlossen:** Netz-/Kurzschlussdaten, vollständige Kabel- und Schutzauslegung,
-Selektivität, Erdungs-/SPD-Abstimmung sowie abschließende Lichtanforderungsbewertung fehlen.
-SIMARIS wurde nicht als ausgeführter nativer Netznachweis verwendet. Kein Bau-/Ausführungsstand.
-„Final“ bezeichnet die abgelegte Version und keine technische Freigabe.
+**Keine normative Konformität, Ausführungsfreigabe oder geprüfte Schutzkoordination wird mit dieser Arbeitsprobe behauptet.**
 
-Frühere V0.x-Dateien und Lastansätze in den Themenordnern bleiben als Historie erhalten.
-Sie werden durch die aktuellen V1.3-Unterlagen nicht rückwirkend verändert; maßgebend für die Fortsetzung ist der oben verlinkte Versionsordner.
+## Dateien gezielt öffnen
 
-Nicht zur Bauausfuehrung freigegeben.
+- **[V1.8-Arbeitsprobe mit bearbeitbaren Dateien](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/README.md)** – Relux-RDF, BricsCAD-DWG/DXF, SIMARIS-SDX/SX, Excel und native Ausgaben.
+- **[Original-Screenshots und Bildverzeichnis](07_Projektstaende/Bahnsteig_V1.8_Arbeitsprobe/04_Screenshots/VERZEICHNIS.md)** – Softwareansichten und Tabellen.
+- **[HD-Bildstrecke](07_Projektstaende/Bericht_Abbildungen_HD/README.md)** – Abbildungen, Auflösung und originale PDF-Quellen.
+- **[Technischer Bericht als GitHub-Lesefassung](docs/TECHNISCHER_PROJEKTBERICHT_LESFASSUNG.md)** – zusammenhängende Erklärung mit ausgewählten Bildern.
+- **[Bisheriger README-Stand (Archiv)](docs/README_ARCHIV_BIS_2026-11-14.md)** – ursprüngliche Dokumentation und historische Versionshinweise.
 
+---
+
+**Bearbeiter:** Mohamed Saida · **Fachgebiet:** Elektrotechnik · **Technische Grundlage:** 05.11.2026 · **Überarbeitung der GitHub-Präsentation:** 14.11.2026
+
+*Die technische V1.8-Projektbasis und die Originaldateien wurden durch diese README-Überarbeitung nicht geändert.*
